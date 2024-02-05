@@ -1,11 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Tasty Tales! A recipe blog website from food-loving people from all around the globe who love to explore, taste and cook variety of recipes">
+    <meta name="keywords" content="blog, food, cooking, recipes, delicacy, delicious, cuisine, explore global cuisines, food-loving, recipes around globe, culinary experience, share">
+    <meta name="author" content="Tasty Tales">
+    
+    <!-- Bootstrap css/js CDN links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   
+     
+    <title>Tasty Tales - {% block title %}{% endblock %}</title>   
 </head>
+
 <body>
+    {% include 'includes/header.html' %}
     <h1>Hello World</h1>
 </body>
 </html>
