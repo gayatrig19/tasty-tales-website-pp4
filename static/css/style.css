@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 450;
+    color: #3a3a3a;
+    background-color: white;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1.5px;
+    color: #191a1a;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(164, 172, 143);
+    box-shadow: 1px -1px 7px 0 darkorange;
+}
+
+/* Logo */
+.navbar-brand {
+    font-family: Oswald, sans-serif;
+    font-style: bold;
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: #191a1a;
+    font-weight: 400;
+}
+
+.navbar-brand:hover {
+    color: #850000;
+}
+
+a.nav-link {
+    color:#3a3a3a;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.show  {
+    color: #850000;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    color: #850000;   
+}
+
