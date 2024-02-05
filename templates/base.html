@@ -23,16 +23,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
      
     <!-- Custom CSS link -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">   
     <title>Tasty Tales - {% block title %}{% endblock %}</title>   
 </head>
 
 <body>
+    <!-- Header Navigation Content -->
     {% include 'includes/header.html' %}
-    <p>Hi There this is a recipe app</p>
-
-
     
+    <!-- Main Content -->
+    <main>
+    {% block content %}
+     <!-- Content from other templates goes here -->
+    {% endblock content %}
+    </main>
+
+    <!-- Header Navigation Content -->
+    {% include 'includes/footer.html' %}
+   
 </body>
 </html>
