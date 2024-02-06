@@ -101,7 +101,33 @@ footer > a {
     font-weight: bold;
 }
 
+/* Index Page */
+/* Hero image and about section */
+.image-background {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("https://res.cloudinary.com/dpzitpjjc/image/upload/v1707249301/media/hero-image_sg6s7s.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.with-shadow {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9); 
+    padding: 20px; 
+    border-radius: 10px; 
+} 
+  
+.display-2 {
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 2px white;
+}
+  
+.lead {
+    color: white;
+    text-shadow: 1px 2px black;
+} 
 
 
 
