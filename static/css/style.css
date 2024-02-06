@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    border: none;
-    box-sizing: border-box;
+    /* border: none;
+    box-sizing: border-box; */
 }
 
 html {
@@ -10,6 +10,7 @@ html {
 }
 
 body {
+    height: 100%;
     font-family: Lato, sans-serif;
     font-weight: 450;
     color: #3a3a3a;
@@ -18,7 +19,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -31,10 +31,9 @@ main {
     flex: 1 0 auto;
 }
 
-
 /* Navbar */
 .navbar {
-    background-color: rgb(164, 172, 143);
+    /* background-color: rgb(164, 172, 143); */
     box-shadow: 1px -1px 7px 0 darkorange;
 }
 
@@ -42,9 +41,10 @@ main {
 .navbar-brand {
     font-family: Oswald, sans-serif;
     font-style: bold;
-    font-size: 38px;
+    font-size: 35px;
     letter-spacing: 1px;
-    color: #191a1a;
+    /* color: #191a1a; */
+    color: rgb(10, 32, 10);
     font-weight: 400;
 }
 
@@ -62,11 +62,16 @@ a.nav-link {
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link.show  {
     color: #850000;
+    font-weight: bold;
 }
 
 .nav-link:hover {
     font-weight: bold;
     color: #850000;   
+}
+
+header {
+    margin-bottom: 0;
 }
 
 /* Footer */
@@ -82,6 +87,7 @@ footer p {
     font-size: 17px;
     color: white;
     font-weight: 450;
+    margin-bottom: 0;
 }
     
 footer > a {
@@ -94,6 +100,7 @@ footer > a {
     color: #850000;
     font-weight: bold;
 }
+
 
 
 
