@@ -147,8 +147,20 @@ footer > a {
     margin-bottom: 20px;
 } 
 
-/* Login form */
-.login {
+.btn-dark {
+    border: none; 
+    border-radius: 5px; 
+    background-color: #188181; 
+    color: #fff; 
+    cursor: pointer; 
+}
+
+.btn-dark:hover {
+    background-color: #23BBBB; 
+}
+
+/* Login and signup form */
+.login, .signup{
     max-width: 400px; 
     margin: 0 auto; 
     padding: 20px; 
@@ -158,7 +170,10 @@ footer > a {
 }
 
 .login input[type="text"],
-.login input[type="password"] {
+.login input[type="password"],
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
     width: 100%; 
     padding: 10px; 
     margin-bottom: 5px; 
@@ -169,14 +184,14 @@ footer > a {
 .btn-signup {
     width: 100%; 
     padding: 10px; 
-    border: none; /* Remove button border */
+    border: none; 
     border-radius: 5px; 
     background-color: #188181; 
     color: #fff; 
     cursor: pointer; 
 }
 
-.login button:hover {
+.btn-signup:hover {
     background-color: #23BBBB; 
 }
 
