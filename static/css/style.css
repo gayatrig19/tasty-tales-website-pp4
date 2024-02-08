@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: none;
-    box-sizing: border-box; */
+    border: none;
+    box-sizing: border-box;
 }
 
 html {
@@ -12,9 +12,10 @@ html {
 body {
     height: 100%;
     font-family: Lato, sans-serif;
+    font-size: 16px;
     font-weight: 450;
     color: #3a3a3a;
-    background-color: white;
+    background-color: whitesmoke;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,8 @@ main {
 /* Navbar */
 .navbar {
     background-color: rgb(164, 172, 143);
-    box-shadow: 1px -1px 7px 0 darkorange;
+    box-shadow: 1px -1px 8px 0 darkorange;
+    border: 2px solid #c42c2c30;
 }
 
 /* Logo */
@@ -48,9 +50,14 @@ main {
     font-weight: 400;
 }
 
+.navbar-brand i {
+    color: orangered;
+}
+
 .navbar-brand:hover {
     color: #850000;
 }
+
 
 a.nav-link {
     color:#3a3a3a;
@@ -79,8 +86,11 @@ header {
 footer {
     flex-shrink: 0;
     text-align: center;
-    background-color: rgb(164, 172, 143);
+    /* background-color: rgb(164, 172, 143); */
+    box-shadow: 1px -1px 8px 0 darkorange;
+    border: 2px solid #c42c2c30;
     /* background-color: rgb(98, 91, 91); */
+    background-color: darkolivegreen;
     padding: 10px;
 } 
 
@@ -99,8 +109,13 @@ footer > a {
 }
 
 .social-links:hover {
-    color: #850000;
+    color: white;
     font-weight: bold;
+    transform: scale(1.5);
+}
+
+.social-links {
+    transition: all 0.3s linear;
 }
 
 /* Index Page */
@@ -116,32 +131,30 @@ footer > a {
 
 .with-shadow {
     box-shadow: 0px 0px 0px 2px rgba(148, 94, 94, 0.9);
-    background-color: rgba(80, 36, 36, 0.9);
+    /* background-color: rgba(80, 36, 36, 0.9); */
+    background-color: rgba(138, 48, 48, 0.9);
     padding: 15px; 
     border-radius: 10px; 
     width: 80%; 
-    max-width: 500px;  
+    max-width: 600px;  
     margin: 0 auto; 
 }
-
   
 .display-2 {
     font-family: Lato, sans-serif;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 400;
     color: white;
 }
   
 .lead {
+    line-height: 1.5;
     color: white;
     font-family: Lato, sans-serif;
     font-size: 18px;
+    margin-bottom: 20px;
 } 
 
-.box-shadow .btn {
-    transform: translateX(-50%);
-    bottom: 20px;
-}
 
 
 
