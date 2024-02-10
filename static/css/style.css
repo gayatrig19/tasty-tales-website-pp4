@@ -34,7 +34,7 @@ main {
 
 /* Navbar */
 .navbar {
-    background-color: rgb(164, 172, 143);
+    /* background-color: rgb(164, 172, 143); */
     box-shadow: 1px -1px 8px 0 darkorange;
     border: 2px solid #c42c2c30;
 }
