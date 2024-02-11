@@ -23,6 +23,9 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, default=None, blank=True,
                                    related_name='recipe_likes')
+    servings = models.PositiveIntegerField(default=1)
+    total_cooking_time = models.PositiveIntegerField(default=15)
+    
     
     class Meta:
         ordering = ['-created_on']
