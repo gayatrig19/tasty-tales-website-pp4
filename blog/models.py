@@ -9,7 +9,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 class Recipe(models.Model):
-
+    """
+    A model to create and display recipes added by users.
+    """
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_owner')
     title = models.CharField(max_length=200, unique=True)
     description = models.CharField(max_length=500, null=False, blank=False)
@@ -33,8 +35,11 @@ class Recipe(models.Model):
 
 
 
-
 class Comment(models.Model):
+    """
+    A Comment Model to create and handle comments added by users
+    Before the comment is published, it needs to be approved by admin
+    """
 
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     comment_author = models.ForeignKey(User, on_delete=models.CASCADE)
