@@ -1,13 +1,39 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.core.exceptions import ValidationError
+from django.core.validators import MaxValueValidator
 
 
+WORLD_CUISINES = (
+    ("american", "American"),
+    ("african", "African"),
+    ("asian", "Asian"),
+    ("caribbean", "Caribbean"),
+    ("chinese", "Chinese"),
+    ("european", "European"),
+    ("indian", "Indian"),
+    ("indonesian", "Indonesian"),
+    ("latin_american", "Latin American"),
+    ("middle_eastern", "Middle Eastern"),
+    ("mexican", "Mexican"),
+    ("oceanic", "Oceanic"),       
+)
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-# Create your models here.
+def validate_nonzero(value):
+    """
+    Function to validate prep_time, cooking_time and servings
+    field values.
+    """
+    if value == 0:
+        raise ValidationError(
+            ('Please enter a value that is greater than zero'),
+            params={'value': value},
+        )
+
 class Recipe(models.Model):
     """
     A model to create and display recipes added by users.
@@ -23,9 +49,17 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, default=None, blank=True,
                                    related_name='recipe_likes')
-    servings = models.PositiveIntegerField(default=1)
-    total_cooking_time = models.PositiveIntegerField(default=15)
-    
+    prep_time = models.PositiveIntegerField(
+        'prep_time', validators=[validate_nonzero, MaxValueValidator(300)], default=1)                              
+    cooking_time = models.PositiveIntegerField(
+        'cooking_time', validators=[
+            validate_nonzero, MaxValueValidator(600)], default=1)
+    servings = models.PositiveIntegerField(
+        'servings', validators=[validate_nonzero, MaxValueValidator(50)])
+    world_cuisines = models.CharField(
+        max_length=60, choices=WORLD_CUISINES, default="Asian"
+    )
+
     
     class Meta:
         ordering = ['-created_on']
