@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import (TemplateView, CreateView)
 from .models import Recipe
+from .forms import RecipeForm
 
 
 class IndexView(TemplateView):
@@ -16,6 +17,7 @@ class AddRecipe(CreateView):
     """
     template_name = 'blog/add_recipe.html'
     model = Recipe
+    form_class = RecipeForm
     success_url = '/blog/'
 
     def form_valid(self, form):

@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'index' as index_url %}
+{% url 'add_recipe' as addrecipe_url%}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -26,13 +27,13 @@
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                <a class="nav-link dropdown-toggle {% if request.path == addrecipe_url %} active {%endif%}" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-user-large"></i>{{ request.user.username }}
+                  <i class="fa-solid fa-user-large"></i>{{ request.user.username }} Profile
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">My Recipes</a></li>
-                  <li><a class="dropdown-item" href="#">Create Recipe</a></li>  
+                  <li><a class="dropdown-item" href="#">My Recipes</a></li> 
+                  <li><a class="dropdown-item {% if request.path == addrecipe_url %}active" aria-current="page{%endif%}" href="{% url 'add_recipe' %}">Add Recipe</a></li>  
                 </ul>
               </li> 
               <li class="nav-item">
