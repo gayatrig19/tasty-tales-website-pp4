@@ -12,7 +12,7 @@ class IndexView(TemplateView):
 
 class AddRecipe(CreateView):
     """
-    Create/ Add recipe View
+    View to add/create recipes
     """
     template_name = 'blog/add_recipe.html'
     model = Recipe
