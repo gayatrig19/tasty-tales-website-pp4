@@ -1,10 +1,30 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import (TemplateView, CreateView)
+from .models import Recipe
 
 
-# Create your views here.
-class Index(TemplateView):
+class IndexView(TemplateView):
+    """
+    View to display home page
+    """
     template_name = 'blog/index.html'
+
+
+class AddRecipe(CreateView):
+    """
+    Create/ Add recipe View
+    """
+    template_name = 'blog/add_recipe.html'
+    model = Recipe
+    success_url = '/blog/'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super(AddRecipe, self).form_valid(form)
+
+
+
+
 
 
 

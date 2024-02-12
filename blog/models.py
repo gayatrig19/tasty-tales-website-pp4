@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator
 
 
-WORLD_CUISINES = (
+CUISINES_TYPE = (
     ("american", "American"),
     ("african", "African"),
     ("asian", "Asian"),
@@ -56,8 +56,8 @@ class Recipe(models.Model):
             validate_nonzero, MaxValueValidator(600)], default=1)
     servings = models.PositiveIntegerField(
         'servings', validators=[validate_nonzero, MaxValueValidator(50)])
-    world_cuisines = models.CharField(
-        max_length=60, choices=WORLD_CUISINES, default="Asian"
+    cuisines_type = models.CharField(
+        max_length=60, choices=CUISINES_TYPE, default="Asian"
     )
 
     
