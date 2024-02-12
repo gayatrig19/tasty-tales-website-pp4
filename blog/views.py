@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (TemplateView, CreateView)
 from .models import Recipe
 from .forms import RecipeForm
@@ -11,7 +12,7 @@ class IndexView(TemplateView):
     template_name = 'blog/index.html'
 
 
-class AddRecipe(CreateView):
+class AddRecipe(LoginRequiredMixin, CreateView):
     """
     View to add/create recipes
     """
