@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'index' as index_url %}
+{% url 'recipes' as recipes_url %}
 {% url 'add_recipe' as addrecipe_url%}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -23,7 +24,7 @@
                 <a class="nav-link {% if request.path == index_url %}active" aria-current="page{% endif %}" href="{% url 'index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Recipes</a>
+                <a class="nav-link {% if request.path == recipes_url %}active" aria-current="page{% endif %}" href="{% url 'recipes' %}">Recipes</a>
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
