@@ -23,9 +23,12 @@ class RecipeForm(forms.ModelForm):
         ]
 
         widgets = {
-            'ingredients': SummernoteWidget(),
-            'instructions': SummernoteWidget(),
-            'description': forms.Textarea(attrs={'rows': 5, 'placeholder': 'Describe your recipe here'}),
+            'ingredients': forms.Textarea(attrs={'placeholder': 'Please write one ingredient per line'}),
+            'instructions': forms.Textarea(attrs={'placeholder': 'Recipe preparation steps'}),
+            'description': forms.Textarea(attrs={'rows': 5, 'placeholder': 'Describe your recipe in short here'}),
+            'prep_time': forms.NumberInput(attrs={'placeholder': 'Preparation time is counted in minutes'}),
+            'cooking_time': forms.NumberInput(attrs={'placeholder': 'Cooking time is counted in minutes'}),
+            'servings': forms.NumberInput(attrs={'placeholder': 'Number of Servings'})
         }
 
         labels = {
@@ -34,11 +37,11 @@ class RecipeForm(forms.ModelForm):
             'featured_image': 'Recipe Image',
             'ingredients': 'Recipe Ingredients',
             'instructions': 'Recipe Instructions',
-            'prep_time': 'Preparation Time',
-            'cooking_time': 'Cooking Time', 
+            'prep_time': 'Preparation Time (time in minutes)',
+            'cooking_time': 'Cooking Time (time in minutes)', 
             'servings': 'Servings', 
             'cuisines_type': 'Cuisine Type',
-            'status': 'Status',
+            'status': 'Status (Save as a Draft / Publish Now)',
         }
 
 
