@@ -20,6 +20,11 @@ class RecipeList(ListView):
     template_name = 'blog/recipes.html'
     model = Recipe
     context_object_name = 'recipes'
+    paginate_by = 6
+
+    def get_query(self):
+        return Recipe.objects.filter(status=1)
+
 
 class AddRecipe(LoginRequiredMixin, CreateView):
     """

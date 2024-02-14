@@ -207,6 +207,19 @@ footer > a {
     object-fit: cover;
 }
 
+/* Recipe List Pagination */
+.page-link {
+    font-weight: bold;
+    color: #E84610;
+    border: 2px solid #dee2e6;
+}
+
+.pagination {
+    margin-bottom: 20px;
+}
+
+
+
 
 
 
