@@ -30,7 +30,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {% if request.path == addrecipe_url %} active {%endif%}" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-user-large"></i>{{ request.user.username }} Profile
+                  <i class="fa-solid fa-user-large"></i>{{ request.user.username }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">My Recipes</a></li> 
@@ -58,15 +58,16 @@
 
        <!-- display alert messages to users-->
        <div class="container">
-         <div class="row">
-           <div class="col-md-8 offset-md-2">
-             {% for message in messages %}
-             <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-               {{ message | safe }}
-               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-             </div>
-             {% endfor %}
-           </div>
-         </div>
-       </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible
+          fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </header>

@@ -23,11 +23,15 @@ class RecipeForm(forms.ModelForm):
         ]
 
         widgets = {
-            'ingredients': forms.Textarea(attrs={'placeholder': 'Please write one ingredient per line'}),
-            'instructions': forms.Textarea(attrs={'placeholder': 'Recipe preparation steps'}),
-            'description': forms.Textarea(attrs={'rows': 5, 'placeholder': 'Describe your recipe in short here'}),
-            'prep_time': forms.NumberInput(attrs={'placeholder': 'Preparation time is counted in minutes'}),
-            'cooking_time': forms.NumberInput(attrs={'placeholder': 'Cooking time is counted in minutes'}),
+            'ingredients': SummernoteWidget(
+                attrs={'placeholder': 'Please write one ingredient per line'}),
+            'instructions': SummernoteWidget(), 
+            'description': forms.Textarea(
+                attrs={'rows': 5, 'placeholder': 'Describe your recipe in short here'}),
+            'prep_time': forms.NumberInput(
+                attrs={'placeholder': 'Preparation time is counted in minutes'}),
+            'cooking_time': forms.NumberInput(
+                attrs={'placeholder': 'Cooking time is counted in minutes'}),
             'servings': forms.NumberInput(attrs={'placeholder': 'Number of Servings'})
         }
 
