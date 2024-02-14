@@ -197,7 +197,6 @@ footer > a {
 
 
 /* Recipe List Page */
-
 .card-img-top {
     width: 100%; 
 }
@@ -207,6 +206,7 @@ footer > a {
     object-fit: cover;
 }
 
+
 /* Recipe List Pagination */
 .page-link {
     font-weight: bold;
@@ -215,7 +215,7 @@ footer > a {
 }
 
 .pagination {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
