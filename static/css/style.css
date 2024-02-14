@@ -219,6 +219,26 @@ footer > a {
 }
 
 
+/* Recipe details */
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.title-container h1,
+.ingredients-container p,
+.instructions-container p {
+    word-wrap: break-word;
+}
+
+.ingredients-container p,
+.instructions-container p {
+    font-size: 16px;
+}
+
+
+
 
 
 

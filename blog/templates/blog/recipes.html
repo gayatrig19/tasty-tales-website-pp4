@@ -15,13 +15,13 @@
                 <img class="card-img-top img-fluid recipe-image" src="{{ recipe.featured_image.url }}" alt="image of the recipe">
                 {% endif %}
                 <div class="card-body">
-                    <p class="card-text text-muted">Posted by {{recipe.author}} || {{ recipe.created_on}}</p>
+                    <p class="card-text text-muted">Posted by {{recipe.author}} | {{ recipe.created_on}}</p>
                     <h2 class="card-title">{{ recipe.title }}</h2>
                     <p class="card-text">{{ recipe.description|truncatechars:90 }}</p>
                     <p class="card-text"><strong><i class="fa-solid fa-globe"></i></strong> Cuisine: {{ recipe.cuisines_type }}</p>
                     
                     <hr/>
-                    <a href="#" class="btn btn-primary">View Recipe</a>
+                    <a href="{% url 'recipe_detail' recipe.pk %}" class="btn btn-primary">View Recipe</a>
                     <!-- <p class="card-text text-muted h6"> {{ recipe.created_on}}</p> -->  
                 </div> 
             </div>
