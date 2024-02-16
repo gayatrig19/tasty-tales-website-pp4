@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic import (TemplateView, CreateView, ListView, DetailView, DeleteView)
 from django.contrib import messages
 from .models import Recipe
 from .forms import RecipeForm
+from django.shortcuts import get_object_or_404
 
 
 class IndexView(TemplateView):
@@ -39,11 +40,12 @@ class AddRecipe(LoginRequiredMixin, CreateView):
     """
     View to add/create recipes
     """
-    template_name = "blog/add_recipe.html"
     model = Recipe
     form_class = RecipeForm
+    template_name = "blog/add_recipe.html"
     success_url = '/blog/'
 
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post #noqa
     def form_valid(self, form):
         form.instance.author = self.request.user
         success_message = "Your recipe has been posted successfully."
@@ -64,10 +66,14 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def get_object(self, queryset=None):
         recipe_id = self.kwargs.get('recipe_id')
         return Recipe.objects.get(pk=recipe_id)
-
-    def delete(self, request, *args, **kwargs):
-        messages.success(self.request, "Your recipe has been deleted successfully.")
+      
+    def form_valid(self, request, *args, **kwargs):
+        success_message = "Your recipe has been deleted successfully."
+        messages.add_message(self.request, messages.SUCCESS, success_message)
+       # messages.success(self.request, "Your recipe has been deleted successfully.")
         return super().delete(request, *args, **kwargs)
+
+   
         
 
 
