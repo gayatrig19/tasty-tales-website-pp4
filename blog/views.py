@@ -61,6 +61,15 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         return self.request.user == self.get_object().author
 
+    def get_object(self, queryset=None):
+        recipe_id = self.kwargs.get('recipe_id')
+        return Recipe.objects.get(pk=recipe_id)
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, "Your recipe has been deleted successfully.")
+        return super().delete(request, *args, **kwargs)
+        
+
 
 
 
