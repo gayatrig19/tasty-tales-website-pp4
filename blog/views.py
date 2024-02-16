@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import TemplateView, CreateView, ListView, DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import (TemplateView, CreateView, ListView, DetailView, DeleteView)
 from django.contrib import messages
 from .models import Recipe
 from .forms import RecipeForm
@@ -35,7 +35,6 @@ class RecipeDetail(DetailView):
     context_object_name = "recipe"
 
 
-
 class AddRecipe(LoginRequiredMixin, CreateView):
     """
     View to add/create recipes
@@ -50,6 +49,18 @@ class AddRecipe(LoginRequiredMixin, CreateView):
         success_message = "Your recipe has been posted successfully."
         messages.add_message(self.request, messages.SUCCESS, success_message)
         return super(AddRecipe, self).form_valid(form)
+
+
+class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    View to delete recipe
+    """
+    model = Recipe
+    success_url = '/blog/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().author
+
 
 
 

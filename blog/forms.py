@@ -1,6 +1,6 @@
+from .models import Recipe
 from django import forms
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
-from .models import Recipe
 
 
 class RecipeForm(forms.ModelForm):
@@ -23,8 +23,7 @@ class RecipeForm(forms.ModelForm):
         ]
 
         widgets = {
-            'ingredients': SummernoteWidget(
-                attrs={'placeholder': 'Please write one ingredient per line'}),
+            'ingredients': SummernoteWidget(),
             'instructions': SummernoteWidget(), 
             'description': forms.Textarea(
                 attrs={'rows': 5, 'placeholder': 'Describe your recipe in short here'}),

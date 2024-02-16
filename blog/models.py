@@ -40,7 +40,7 @@ class Recipe(models.Model):
     """
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_owner')
     title = models.CharField(max_length=200, unique=True)
-    description = models.CharField(max_length=500, null=False, blank=False)
+    description = models.CharField(max_length=700, null=False, blank=False)
     featured_image = CloudinaryField('image', default='placeholder')
     ingredients = models.TextField(blank=False)
     instructions = models.TextField(blank=False)
@@ -50,10 +50,10 @@ class Recipe(models.Model):
     likes = models.ManyToManyField(User, default=None, blank=True,
                                    related_name='recipe_likes')
     prep_time = models.PositiveIntegerField(
-        'prep_time', validators=[validate_nonzero, MaxValueValidator(300)], default=1)                              
+        'prep_time', validators=[validate_nonzero, MaxValueValidator(300)], default=15)                              
     cooking_time = models.PositiveIntegerField(
         'cooking_time', validators=[
-            validate_nonzero, MaxValueValidator(600)], default=1)
+            validate_nonzero, MaxValueValidator(600)], default=15)
     servings = models.PositiveIntegerField(
         'servings', validators=[validate_nonzero, MaxValueValidator(50)])
     cuisines_type = models.CharField(

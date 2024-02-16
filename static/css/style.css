@@ -12,7 +12,7 @@ html {
 body {
     height: 100%;
     font-family: Lato, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 450;
     color: #3a3a3a;
     background-color: #F9FAFC;
@@ -206,6 +206,10 @@ footer > a {
     object-fit: cover;
 }
 
+.card-line {
+    font-size: 16px;
+}
+
 
 /* Recipe List Pagination */
 .page-link {
@@ -234,7 +238,7 @@ footer > a {
 
 .ingredients-container p,
 .instructions-container p {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 
