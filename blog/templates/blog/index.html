@@ -3,19 +3,19 @@
 
 
 {% block content %}
-<!-- Hero image -->
+<!-- Hero image and about -->
 <div class="image-background">
-    <div class="container h-100">
+    <div class="container h-100 justify-content-center">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
                 <div class="with-shadow">
-                    <p class="display-2">Welcome to Tasty Tales</p>
-                    <p class="lead">Here, flavour meets creativity in every bite!</br> Explore delightful recipes from every corner of the world with us.
-                       Share your creations, swap tips, and savor the flavors of homemade goodness. 
+                    <h1 class="display-1">Welcome to Tasty Tales</h1>
+                    <p class="lead">Here, flavour meets creativity in every bite!</p>  
+                    <p class="lead">Explore delightful recipes from every corner of the world with us.
+                        Share your creations, swap tips, and savor the flavors of homemade goodness. 
                        {% if not user.is_authenticated %} Join us and let's cook up something delicious together!
                     </p>
-                    
-                    <a href="{% url 'account_signup' %}" class="btn btn-dark">Signup Now</a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-dark mt-2 mb-2">Signup Now</a>
                     {% endif %}
                 </div>
             </div>
