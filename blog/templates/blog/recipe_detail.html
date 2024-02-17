@@ -24,7 +24,7 @@
             <p>{{ recipe.description }}</p>
             {% if request.user == recipe.author %}
             <a href="#" id="edit-button" class="btn btn-primary">Edit</a>
-            <a href="{% url 'recipe_delete' recipe_id=recipe.id %}" id="delete-button" class="btn btn-primary">Delete</a>
+            <a href="{% url 'delete_recipe' recipe_id=recipe.id %}" id="delete-button" class="btn btn-primary">Delete</a>
             {% endif %}
         </div>
     </div>
