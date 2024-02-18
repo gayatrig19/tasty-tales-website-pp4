@@ -80,25 +80,24 @@ class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
     
-# class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-#     """
-#     View to delete recipe
-#     """
-#     model = Recipe
-#     success_url = '/blog/'
+class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    View to delete recipe
+    """
+    model = Recipe
+    success_url = reverse_lazy('recipes')
 
-#     def test_func(self):
-#         return self.request.user == self.get_object().author
+    def test_func(self):
+        return self.request.user == self.get_object().author
 
     # def get_object(self, queryset=None):
     #     recipe_id = self.kwargs.get('recipe_id')
     #     return Recipe.objects.get(pk=recipe_id)
       
-    # def form_valid(self, request, *args, **kwargs):
-    #     success_message = "Your recipe has been deleted successfully."
-    #     messages.add_message(self.request, messages.SUCCESS, success_message)
-       # messages.success(self.request, "Your recipe has been deleted successfully.")
-        # return super().delete(request, *args, **kwargs)
+    def form_valid(self, request, *args, **kwargs):
+        success_message = "Your recipe has been deleted successfully."
+        messages.add_message(self.request, messages.SUCCESS, success_message)
+        return super().delete(request, *args, **kwargs)
 
    
         
