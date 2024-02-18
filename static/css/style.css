@@ -158,7 +158,16 @@ footer > a {
 
 
 /* Login and Signup Form */
-.login, .signup{
+.card {
+    border-color:black;
+    box-shadow: 1px -1px 8px black;
+}
+
+.card-bg {
+    background-color: #188181;
+}
+
+.login, .signup {
     max-width: 400px; 
     margin: 0 auto; 
     padding: 20px; 
@@ -206,6 +215,10 @@ footer > a {
 
 .card-line {
     font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
 }
 
 
