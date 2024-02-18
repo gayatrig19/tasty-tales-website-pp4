@@ -21,7 +21,7 @@
                     <p class="card-text card-content"><strong><i class="fa-solid fa-globe"></i></strong> Cuisine: {{ recipe.get_cuisines_type_display }}</p>
                     
                     <hr/>
-                    <!-- <a href="{% url 'recipe_detail' recipe.pk %}" class="btn btn-primary">View Recipe</a> -->
+                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary">View Recipe</a>
                     <!-- <p class="card-text text-muted h6"> {{ recipe.created_on}}</p> -->  
                 </div> 
             </div>

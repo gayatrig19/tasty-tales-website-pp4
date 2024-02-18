@@ -28,13 +28,13 @@ class RecipeList(ListView):
         return Recipe.objects.filter(status=1)
 
 
-# class RecipeDetail(DetailView):
-#     """
-#     Class based view to display the recipe details
-#     """
-#     template_name = "blog/recipe_detail.html"
-#     model = Recipe
-#     context_object_name = "recipe"
+class RecipeDetail(DetailView):
+    """
+    Class based view to display the recipe details
+    """
+    template_name = "blog/recipe_detail.html"
+    model = Recipe
+    context_object_name = "recipe"
 
 
 # class AddRecipe(LoginRequiredMixin, CreateView):

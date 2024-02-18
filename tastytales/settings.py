@@ -178,21 +178,31 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# django_summernot config
 SUMMERNOTE_CONFIG = {
     'summernote': {
+
+        # Change editor size
         'width': '100%',
         'height': '480px',
-        # 'fontNames': ['Lato', 'Sans Serif'],
+
+        'fontNames': ['Lato', 'Sans Serif'],
         'fontNamesIgnoreCheck': ['Lato', 'Sans Serif'],
-        'toolbar': [
-            ['style', ['style']],
-            ['fontnames', ['Lato', 'Sans Serif', 'Serif']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['para', ['ul', 'ol']],
-            ['insert', ['link', 'picture', 'video']],
-            ['view', ['fullscreen', 'codeview']],
-        ],
+        'fontsizes': ['17'],
+        'fontSizeUnits': ['px'],
+
+
+        # 'toolbar': [
+        #     # ['fontname', ['fontname']],
+        #     # ['fontsize', ['fontsize']],
+        #     # ['fontSizes', ['17']],
+        #     ['font', ['bold', 'italic', 'underline']],
+        #     ['para', ['ul', 'ol', 'paragraph']],
+        #     # ['style', ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']],
+        #     ['insert', ['link']],
+        #     ['table', ['table']],
+        #     ['view', ['fullscreen', 'help']],
+        # ],
         'disableResizeEditor': True,
         'styleTags': ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
     },
