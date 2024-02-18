@@ -28,75 +28,80 @@ class RecipeList(ListView):
         return Recipe.objects.filter(status=1)
 
 
-class RecipeDetail(DetailView):
-    """
-    Class based view to display the recipe details
-    """
-    template_name = "blog/recipe_detail.html"
-    model = Recipe
-    context_object_name = "recipe"
+# class RecipeDetail(DetailView):
+#     """
+#     Class based view to display the recipe details
+#     """
+#     template_name = "blog/recipe_detail.html"
+#     model = Recipe
+#     context_object_name = "recipe"
 
 
-class AddRecipe(LoginRequiredMixin, CreateView):
-    """
-    View to add/create recipes
-    """
-    model = Recipe
-    form_class = RecipeForm
-    template_name = "blog/add_recipe.html"
-    success_url = '/blog/'
+# class AddRecipe(LoginRequiredMixin, CreateView):
+#     """
+#     View to add/create recipes
+#     """
+#     model = Recipe
+#     form_class = RecipeForm
+#     template_name = "blog/add_recipe.html"
+#     success_url = '/blog/'
 
     # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post #noqa
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        success_message = "Your recipe has been posted successfully."
-        messages.add_message(self.request, messages.SUCCESS, success_message)
-        return super(AddRecipe, self).form_valid(form)
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     success_message = "Your recipe has been posted successfully."
+    #     messages.add_message(self.request, messages.SUCCESS, success_message)
+    #     return super(AddRecipe, self).form_valid(form)
 
 
-class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """
-    View to edit recipe
-    """
-    model = Recipe
-    form_class = RecipeForm
-    template_name = "blog/update_recipe.html"
-    success_url = '/blog/'
+# class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+#     """
+#     View to edit recipe
+#     """
+#     model = Recipe
+#     form_class = RecipeForm
+#     template_name = "blog/update_recipe.html"
+#     success_url = '/blog/'
 
-    def test_func(self):
-        return self.request.user == self.get_object().author
+    # def get_form_kwargs(self):
+    #     kwargs = super().get_form_kwargs()
+    #     kwargs['instance'] = self.get_object() 
+    #     return kwargs
 
-    def get_object(self, queryset=None):
-        recipe_id = self.kwargs.get('recipe_id')
-        return Recipe.objects.get(pk=recipe_id)
+    # def test_func(self):
+    #     return self.request.user == self.get_object().author
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        success_message = "Your recipe has been updated successfully."
-        messages.add_message(self.request, messages.SUCCESS, success_message)
-        return super().form_valid(form)
+    # def get_object(self, queryset=None):
+    #     recipe_id = self.kwargs.get('recipe_id')
+    #     return Recipe.objects.get(pk=recipe_id)
+
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     success_message = "Your recipe has been updated successfully."
+    #     messages.add_message(self.request, messages.SUCCESS, success_message)
+    #     return super().form_valid(form)
 
 
     
-class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """
-    View to delete recipe
-    """
-    model = Recipe
-    success_url = '/blog/'
+# class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+#     """
+#     View to delete recipe
+#     """
+#     model = Recipe
+#     success_url = '/blog/'
 
-    def test_func(self):
-        return self.request.user == self.get_object().author
+#     def test_func(self):
+#         return self.request.user == self.get_object().author
 
-    def get_object(self, queryset=None):
-        recipe_id = self.kwargs.get('recipe_id')
-        return Recipe.objects.get(pk=recipe_id)
+    # def get_object(self, queryset=None):
+    #     recipe_id = self.kwargs.get('recipe_id')
+    #     return Recipe.objects.get(pk=recipe_id)
       
-    def form_valid(self, request, *args, **kwargs):
-        success_message = "Your recipe has been deleted successfully."
-        messages.add_message(self.request, messages.SUCCESS, success_message)
+    # def form_valid(self, request, *args, **kwargs):
+    #     success_message = "Your recipe has been deleted successfully."
+    #     messages.add_message(self.request, messages.SUCCESS, success_message)
        # messages.success(self.request, "Your recipe has been deleted successfully.")
-        return super().delete(request, *args, **kwargs)
+        # return super().delete(request, *args, **kwargs)
 
    
         

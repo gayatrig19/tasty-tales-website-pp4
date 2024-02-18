@@ -10,7 +10,7 @@
         <!-- Column with image -->
         <div class="col-12 col-lg-6 mb-4 mb-lg-0">
             {% if "placeholder" in recipe.featured_image.url %}
-            <img class="image img-fluid" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1707925532/media/default-recipes-image_aufh8i.jpg" alt="default recipe image">
+            <img class="image img-fluid" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="default recipe image">
             {% else %}
             <img class="image img-fluid" src="{{ recipe.featured_image.url }}" alt="image of the recipe">
             {% endif %}
@@ -18,16 +18,16 @@
         <!-- Column with recipe details -->
         <div class="title-container col-12 col-lg-6">
             <h1>{{ recipe.title }}</h1>
-            <p class="text-muted">Posted By: {{ recipe.author}} | {{ recipe.created_on }}</p>
-            <p><i class="fa-solid fa-clock"></i> Prep Time: {{ recipe.prep_time}} mins</p>
-            <p><i class="fa-solid fa-clock"></i> Cooking Time: {{ recipe.cooking_time }} mins</p>
-            <p><i class="fa-solid fa-bowl-food"></i> Servings: {{ recipe.servings }}</p>
-            <p><i class="fa-solid fa-globe"></i> Cuisine: {{ recipe.get_cuisines_type_display }}</p>
+            <p>Posted By: {{ recipe.author}} | {{ recipe.created_on }}</p>
+            <p><i class="fa-solid fa-kitchen-set"></i><strong> Prep Time:</strong> {{ recipe.prep_time}} mins</p>
+            <p><i class="fa-solid fa-clock"></i><strong> Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
+            <p><i class="fa-solid fa-bowl-food"></i><strong> Servings:</strong> {{ recipe.servings }}</p>
+            <p><i class="fa-solid fa-globe"></i><strong> Cuisine:</strong> {{ recipe.get_cuisines_type_display }}</p>
             <p>{{ recipe.description }}</p>
-            {% if request.user == recipe.author %}
-            <a href="{% url 'update_recipe' recipe_id=recipe.id %}" id="edit-button" class="btn btn-primary">Edit</a>
-            <a href="{% url 'delete_recipe' recipe_id=recipe.id %}" id="delete-button" class="btn btn-primary">Delete</a>
-            {% endif %}
+            <!-- {% if request.user == recipe.author %}
+            <a href="{% url 'update_recipe' recipe.id %}" id="edit-button" class="btn btn-success w-25">Edit</a>
+            <a href="{% url 'delete_recipe' recipe.id %}" id="delete-button" class="btn btn-danger w-25">Delete</a>
+            {% endif %} -->
         </div>
     </div>
     <hr>

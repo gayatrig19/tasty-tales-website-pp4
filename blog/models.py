@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.template.defaultfilters import slugify
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator
 
@@ -36,10 +37,11 @@ def validate_nonzero(value):
 
 class Recipe(models.Model):
     """
-    A model to create and display recipes added by users.
+    A recipe model to create and display recipes added by users.
     """
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_owner')
     title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     description = models.CharField(max_length=700, null=False, blank=False)
     featured_image = CloudinaryField('image', default='placeholder')
     ingredients = models.TextField(blank=False)
@@ -69,6 +71,14 @@ class Recipe(models.Model):
 
     def total_num_of_likes(self):
         return self.likes.count()
+
+    def save(self, *args, **kwargs):
+        """
+        A method to generate slug for recipes submitted 
+        by user through the site form
+        """
+        self.slug = slugify(self.title)
+        super(Recipe, self).save(*args, **kwargs)
 
 
 
