@@ -24,8 +24,8 @@
             <p><i class="fa-solid fa-bowl-food"></i><strong> Servings:</strong> {{ recipe.servings }}</p>
             <p><i class="fa-solid fa-globe"></i><strong> Cuisine:</strong> {{ recipe.get_cuisines_type_display }}</p>
             <p>{{ recipe.description }}</p>
-            {% if request.user == recipe.author %}
-            <a href="#" id="edit-button" class="btn btn-success w-25">Edit</a>
+            {% if user.id == recipe.author.id %}
+            <a href="{% url 'update_recipe' recipe.slug %}" id="edit-button" class="btn btn-success w-25">Edit</a>
             <a href="#" id="delete-button" class="btn btn-danger w-25">Delete</a>
             {% endif %}
         </div>

@@ -5,6 +5,7 @@ from django.views.generic import (
 from django.contrib import messages
 from .models import Recipe
 from .forms import RecipeForm
+from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 
 
@@ -37,49 +38,45 @@ class RecipeDetail(DetailView):
     context_object_name = "recipe"
 
 
-# class AddRecipe(LoginRequiredMixin, CreateView):
-#     """
-#     View to add/create recipes
-#     """
-#     model = Recipe
-#     form_class = RecipeForm
-#     template_name = "blog/add_recipe.html"
-#     success_url = '/blog/'
+class AddRecipe(LoginRequiredMixin, CreateView):
+    """
+    View to add/create recipes
+    """
+    model = Recipe
+    form_class = RecipeForm
+    template_name = "blog/add_recipe.html"
+    success_url = reverse_lazy('recipes')
 
     # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post #noqa
-    # def form_valid(self, form):
-    #     form.instance.author = self.request.user
-    #     success_message = "Your recipe has been posted successfully."
-    #     messages.add_message(self.request, messages.SUCCESS, success_message)
-    #     return super(AddRecipe, self).form_valid(form)
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        success_message = "Your recipe has been posted successfully."
+        messages.add_message(self.request, messages.SUCCESS, success_message)
+        return super(AddRecipe, self).form_valid(form)
 
 
-# class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-#     """
-#     View to edit recipe
-#     """
-#     model = Recipe
-#     form_class = RecipeForm
-#     template_name = "blog/update_recipe.html"
-#     success_url = '/blog/'
+class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    View to edit recipe
+    """
+    model = Recipe
+    form_class = RecipeForm
+    template_name = "blog/update_recipe.html"
+    success_url = reverse_lazy('recipes')
 
-    # def get_form_kwargs(self):
-    #     kwargs = super().get_form_kwargs()
-    #     kwargs['instance'] = self.get_object() 
-    #     return kwargs
 
-    # def test_func(self):
-    #     return self.request.user == self.get_object().author
+    def test_func(self):
+        return self.request.user == self.get_object().author
 
     # def get_object(self, queryset=None):
     #     recipe_id = self.kwargs.get('recipe_id')
     #     return Recipe.objects.get(pk=recipe_id)
 
-    # def form_valid(self, form):
-    #     form.instance.author = self.request.user
-    #     success_message = "Your recipe has been updated successfully."
-    #     messages.add_message(self.request, messages.SUCCESS, success_message)
-    #     return super().form_valid(form)
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        success_message = "Your recipe has been updated successfully."
+        messages.add_message(self.request, messages.SUCCESS, success_message)
+        return super().form_valid(form)
 
 
     

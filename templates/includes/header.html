@@ -2,7 +2,7 @@
 
 {% url 'index' as index_url %}
 {% url 'recipes' as recipes_url %}
-<!-- {% url 'add_recipe' as addrecipe_url%} -->
+{% url 'add_recipe' as add_recipe_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -27,6 +27,9 @@
                 <a class="nav-link {% if request.path == recipes_url %}active" aria-current="page{% endif %}" href="{% url 'recipes' %}">Recipes</a>
               </li>
               {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == add_recipe_url %}active" aria-current="page{% endif %}" href="{% url 'add_recipe' %}">Add Recipe</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +37,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">My Recipes</a></li> 
-                  <li><a class="dropdown-item " href="#">Add Recipe</a></li>  
+                  <li><a class="dropdown-item " href="#">My Drafts</a></li>  
                 </ul>
               </li> 
               <li class="nav-item">
@@ -56,6 +59,7 @@
         </div>
       </nav>
 
+      <!-- Source: Code Institute's I Think Therefore I Blog Walkthrough Project -->
        <!-- display alert messages to users-->
        <div class="container">
         <div class="row">
