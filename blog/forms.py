@@ -1,4 +1,4 @@
-from .models import Recipe
+from .models import Recipe, Comment
 from django import forms
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
@@ -45,6 +45,16 @@ class RecipeForm(forms.ModelForm):
             'servings': 'Servings', 
             'cuisines_type': 'Cuisine Type',
             'status': 'Status (Save as a Draft / Publish Now)',
+        }
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('comment_body',)
+
+        labels = {
+            'comment_body': 'Leave your comment here',
         }
 
 
