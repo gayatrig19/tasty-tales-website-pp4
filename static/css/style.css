@@ -15,8 +15,8 @@ body {
     font-size: 17px;
     font-weight: 450;
     color: #3a3a3a;
-    /* background-color: #F9FAFC; */
-    background-color: whitesmoke;
+    background-color: #F9FAFC;
+    /* background-color: whitesmoke; */
     display: flex;
     flex-direction: column;
 }
@@ -241,6 +241,13 @@ footer > a {
     height: auto;
 }
 
+.spacer {
+    margin-left: 30px;
+}
+
+.spacer-font {
+    font-size: 23px;
+}
 .title-container h1,
 .ingredients-container p,
 .instructions-container p {

@@ -19,6 +19,31 @@
         <div class="title-container col-12 col-lg-6">
             <h1>{{ recipe.title }}</h1>
             <p>Posted By: {{ recipe.author}} | {{ recipe.created_on }}</p>
+
+            <div class="row mb-3">
+                <div class="col">
+                    {% if user.is_authenticated %}
+                    <form method="POST" class="d-inline" action="{% url 'recipe_like' recipe.slug %}">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button class="bg-transparent" type="submit" name="recipe_id" value="{{ recipe.slug }}" aria-label="liked the recipe">
+                            <i class="fa-solid fa-heart" style="font-size: 26px; color: red;"></i></button>
+                        {% else %}
+                        <button class="bg-transparent" type="submit" name="recipe_id" value="{{ recipe.slug }}" aria-label="unliked the recipe">
+                            <i class="fa-regular fa-heart" style="font-size: 26px;"></i></button>  
+                        {% endif %}             
+                    </form>
+                    {% else %}
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    {% endif %}
+                    <span style="font-size: 23px;">{{ recipe.total_num_of_likes }}</span>
+                    {% with comments.count as total_comments %}
+                    <span class="spacer spacer-font"><i class="fa-solid fa-comments" style="font-size: 26px;"></i>
+                        {{ total_comments }}
+                    </span>
+                    {% endwith %}
+                </div>
+            </div>
             <p><i class="fa-solid fa-kitchen-set"></i><strong> Prep Time:</strong> {{ recipe.prep_time}} mins</p>
             <p><i class="fa-solid fa-clock"></i><strong> Cooking Time:</strong> {{ recipe.cooking_time }} mins</p>
             <p><i class="fa-solid fa-bowl-food"></i><strong> Servings:</strong> {{ recipe.servings }}</p>
@@ -28,16 +53,8 @@
             <a href="{% url 'update_recipe' recipe.slug %}" id="edit-button" class="btn btn-success w-25">Edit</a>
             <a href="{% url 'delete_recipe' recipe.slug %}" id="delete-button" class="btn btn-danger w-25">Delete</a>
             {% endif %}
-        </div>
-        <!-- <div class="row">
-            <div class="col text-center">
-                <form action="#">
-                    <button></button>
-                </form>
-
-            </div>
-
-        </div> -->
+           
+        </div>    
     </div>
     <hr>
     
@@ -47,16 +64,21 @@
         <div class="col-md-6 ingredients-container">
             <div class="mb-3">
                 <h2>Ingredients:</h2>
-                <p>{{ recipe.ingredients | safe }}</p>
+                <p>
+                    {{ recipe.ingredients | safe }}
+                </p>
             </div>
         </div>
         <div class="col-md-6 instructions-container">
             <div class="mb-3">
                 <h2>Instructions:</h2>
-                <p>{{ recipe.instructions | safe }}</p>
+                <p>
+                    {{ recipe.instructions | safe }}
+                </p>
             </div>
         </div>
     </div>
+    <hr>
 </div>
 
 <!-- Comment Section -->
