@@ -64,13 +64,8 @@ class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = "blog/update_recipe.html"
     success_url = reverse_lazy('recipes')
 
-
     def test_func(self):
         return self.request.user == self.get_object().author
-
-    # def get_object(self, queryset=None):
-    #     recipe_id = self.kwargs.get('recipe_id')
-    #     return Recipe.objects.get(pk=recipe_id)
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -89,10 +84,6 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user == self.get_object().author
-
-    # def get_object(self, queryset=None):
-    #     recipe_id = self.kwargs.get('recipe_id')
-    #     return Recipe.objects.get(pk=recipe_id)
       
     def form_valid(self, request, *args, **kwargs):
         success_message = "Your recipe has been deleted successfully."
