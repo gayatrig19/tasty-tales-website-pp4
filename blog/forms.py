@@ -57,4 +57,3 @@ class CommentForm(forms.ModelForm):
             'comment_body': 'Leave your comment here',
         }
 
-
