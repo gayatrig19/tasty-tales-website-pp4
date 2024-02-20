@@ -48,6 +48,17 @@
 
     <!-- Footer Content -->
     {% include 'includes/footer.html' %}
-   
+
+    {% block extra_js %}
+    <script>
+        // Code from Code Institute's Walkthrough project 
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 3000);
+    </script>
+
+    {% endblock %}
 </body>
 </html>

@@ -10,9 +10,9 @@
         <div class="col-lg-4 col-md-6 col-12 mb-5 mx-auto">
             <div class="card h-100">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img class="card-img-top recipe-image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="default recipe image">
+                <img class="recipe-image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="default recipe image">
                 {% else %}
-                <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}" alt="image of the recipe">
+                <img class="recipe-image" src="{{ recipe.featured_image.url }}" alt="image of the recipe">
                 {% endif %}
                 <div class="card-body">
                     <p class="card-text text-muted">Posted by {{recipe.author}} | {{ recipe.created_on}}</p>
@@ -20,7 +20,7 @@
                     <p class="card-text card-content">{{ recipe.description|truncatechars:90 }}</p>
                     <p class="card-text card-content"><strong><i class="fa-solid fa-globe"></i></strong> Cuisine: {{ recipe.get_cuisines_type_display }}</p>
                     
-                    <hr/>
+                    <hr>
                     <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary">View Recipe</a>
                     <!-- <p class="card-text text-muted h6"> {{ recipe.created_on}}</p> -->  
                 </div> 

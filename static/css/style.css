@@ -202,13 +202,9 @@ footer > a {
     background-color: #23BBBB; 
 }
 
-
 /* Recipe List Page */
-.card-img-top {
-    width: 100%; 
-}
-
 .recipe-image {
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -220,7 +216,6 @@ footer > a {
 .btn-primary:hover {
     background-color: darkblue;
 }
-
 
 /* Recipe List Pagination */
 .page-link {
@@ -246,8 +241,9 @@ footer > a {
 }
 
 .spacer-font {
-    font-size: 23px;
+    font-size: 19px;
 }
+
 .title-container h1,
 .ingredients-container p,
 .instructions-container p {

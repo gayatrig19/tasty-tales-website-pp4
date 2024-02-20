@@ -32,14 +32,10 @@ class RecipeList(ListView):
 
 class RecipeDetail(View):
     """
-    Class based view to display the recipe details
+    View to render recipe detail
     """
-    # template_name = "blog/recipe_detail.html"
-    # model = Recipe
-    # context_object_name = "recipe"
-
     def get(self, request, slug, *args, **kwargs):
-        queryset = Recipe.objects.filter(status=1)
+        queryset = Recipe.objects.all()
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         liked = False
@@ -59,7 +55,7 @@ class RecipeDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        queryset = Recipe.objects.filter(status=1)
+        queryset = Recipe.objects
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         liked = False
