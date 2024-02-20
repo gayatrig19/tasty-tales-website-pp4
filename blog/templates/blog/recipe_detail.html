@@ -20,26 +20,37 @@
             <h1>{{ recipe.title }}</h1>
             <p>Posted By: {{ recipe.author}} | {{ recipe.created_on }}</p>
 
+
             <div class="row mb-3">
                 <div class="col">
                     {% if user.is_authenticated %}
                     <form method="POST" class="d-inline" action="{% url 'recipe_like' recipe.slug %}">
                         {% csrf_token %}
                         {% if liked %}
-                        <button class="bg-transparent" type="submit" name="recipe_id" value="{{ recipe.slug }}" style="font-size: 26px; color: red;" aria-label="liked the recipe">
-                            <i class="fa-solid fa-heart"></i></button>
+
+                        <button class="like-icon liked bg-transparent" type="submit" name="recipe_id" 
+                            value="{{ recipe.slug }}" aria-label="like the recipe">
+                            <strong><i class="fa-solid fa-heart"></i></strong>
+                        </button>
                         {% else %}
-                        <button class="bg-transparent" type="submit" name="recipe_id" value="{{ recipe.slug }}" style="font-size: 26px;" aria-label="unliked the recipe">
-                            <i class="fa-regular fa-heart"></i></button>  
+
+                        <button class="bg-transparent like-icon" type="submit" name="recipe_id" 
+                            value="{{ recipe.slug }}" aria-label="unlike the recipe">
+                            <strong><i class="fa-regular fa-heart"></i></strong>
+                        </button>  
                         {% endif %}             
                     </form>
                     {% else %}
-                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span class="like-icon">
+                        <strong><i class="fa-regular fa-heart"></i></strong>
+                    </span>
                     {% endif %}
-                    <span class="spacer-font">{{ recipe.total_num_of_likes }}</span>
+                    <span class="spacer-font">
+                        <strong>{{ recipe.total_num_of_likes }}</strong>
+                    </span>
                     {% with comments.count as total_comments %}
-                    <span class="spacer spacer-font"><i class="fa-solid fa-comments"></i>
-                        {{ total_comments }}
+                    <span class="spacer spacer-font"><strong>
+                        <i class="fa-solid fa-comments"></i> {{ total_comments }}</strong>
                     </span>
                     {% endwith %}
                 </div>
@@ -84,12 +95,12 @@
 <!-- Comment Section -->
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-6 mt-3">
-            <h3 class="mt-3">Comments:</h3>
+        <div class="col-12 col-lg-6 mt-2">
+            <h3 class="mt-3 mb-4">Comments:</h3>
             {% for comment in comments %}
-            <div>
-                <p>{{ comment.comment_author.username }} || {{ comment.created_on }} wrote:</p>
-                {{ comment.comment_body | linebreaks }}
+            <div class="mb-4">
+                <p><strong>{{ comment.comment_author.username }}</strong> || {{ comment.created_on }} wrote:</p>
+                 {{ comment.comment_body | linebreaks }}
             </div>
             {% empty %}
             <p>No comments yet</p>
@@ -97,21 +108,26 @@
         </div>
         <div class="col-12 col-lg-6 mt-3 mb-4">
             {% if commented %}
-            <div class="alert alert-success" role="alert">
+            <div  class="alert alert-success" role="alert">
                 Your comment is awaiting approval
             </div>
             {% else %}
 
             {% if user.is_authenticated %}
-            <h3>Leave a Comment:</h3>
+            <h4>Leave a Comment:</h4>
             <p>Posting as: {{ user.username }}</p>
             <form method="post" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
+            {% else %}
+            <p>Login now to leave a comment on or like this recipe. <a class="btn btn-primary"
+                href="{% url 'account_login' %}?next={{ request.get_full_path }}">Sign in</a>
+            </p>
+
             {% endif %}
-            {% endif%}
+            {% endif %}
         </div>
     </div>
 

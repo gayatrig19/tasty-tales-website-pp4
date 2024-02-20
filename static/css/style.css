@@ -236,12 +236,20 @@ footer > a {
     height: auto;
 }
 
+.like-icon {
+    font-size: 27px;
+}
+
+.liked {
+    color: red;
+}
+
 .spacer {
     margin-left: 30px;
 }
 
 .spacer-font {
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .title-container h1,
@@ -254,6 +262,7 @@ footer > a {
 .instructions-container p {
     font-size: 17px;
 }
+
 
 
 
