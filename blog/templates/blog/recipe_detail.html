@@ -1,18 +1,17 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
 {% block title %}Recipe Detail - {{ recipe.title }} {% endblock %}
 
-
+{% load crispy_forms_tags %}
 {% block content %}
 <div class="container">
     <div class="row align-items-start mt-5 mb-4">
         <!-- Column with image -->
         <div class="col-12 col-lg-6 mb-4 mb-lg-0">
             {% if "placeholder" in recipe.featured_image.url %}
-            <img class="image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="default recipe image">
+            <img class="image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
             {% else %}
-            <img class="image" src="{{ recipe.featured_image.url }}" alt="image of the recipe">
+            <img class="image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
             {% endif %}
         </div>
         <!-- Column with recipe details -->
@@ -116,7 +115,7 @@
             {% if user.is_authenticated %}
             <h4>Leave a Comment:</h4>
             <p>Posting as: {{ user.username }}</p>
-            <form method="post" style="margin-top: 1.3em;">
+            <form method="post" style="margin-top: 1.3em;" >
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="btn btn-success">Submit</button>

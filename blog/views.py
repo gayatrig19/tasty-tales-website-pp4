@@ -26,7 +26,7 @@ class RecipeList(ListView):
     context_object_name = "recipes"
     paginate_by = 6
 
-    def get_query(self):
+    def get_queryset(self):
         return Recipe.objects.filter(status=1).order_by('-created_on')
 
 
@@ -99,6 +99,7 @@ class AddRecipe(LoginRequiredMixin, CreateView):
     template_name = "blog/add_recipe.html"
     success_url = reverse_lazy('recipes')
 
+
     # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post #noqa
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -115,6 +116,7 @@ class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     form_class = RecipeForm
     template_name = "blog/update_recipe.html"
     success_url = reverse_lazy('recipes')
+   
 
     def test_func(self):
         return self.request.user == self.get_object().author
@@ -156,7 +158,22 @@ class RecipeLike(View):
         
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
-   
+
+
+class UserDrafts(ListView):
+    """
+    Class based views to view users own recipes
+    """
+
+    template_name = "blog/my_drafts.html"
+    model = Recipe
+    context_object_name = "recipe_drafts"
+    paginate_by = 6
+
+    def get_queryset(self):
+        return Recipe.objects.filter(author=self.request.user, status=0)
+       
+
         
 
 
