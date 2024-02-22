@@ -6,7 +6,7 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container mt-5 mb-3">
+<div class="container mt-5 mb-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card">
@@ -15,7 +15,7 @@
         </div>
         <div class="card-body">
           <p>{% blocktrans %}To leave a comment, create or like a post, please log in. 
-            If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+            If you have not created an account yet, then please <a href="{{ signup_url }}"><strong>sign up</strong></a> first.{% endblocktrans %}</p>
 
           <form class="login" method="POST" action="{% url 'account_login' %}">
             {% csrf_token %}

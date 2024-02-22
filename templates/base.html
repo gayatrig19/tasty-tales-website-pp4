@@ -6,8 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tasty Tales! A recipe blog website from food-loving people from all around the globe who love to explore, taste and cook variety of recipes">
-    <meta name="keywords" content="blog, food, cooking, recipes, delicacy, delicious, cuisine, explore global cuisines, food-loving, recipes around globe, culinary experience, share, recipe-sharing">
+    <meta 
+    name="description" 
+    content="Tasty Tales! A recipe blog website from food-loving people from all around the globe who love to explore, taste and cook variety of recipes">
+    <meta 
+    name="keywords" 
+    content="blog, food, cooking, recipes, delicacy, delicious, cuisine, explore global cuisines, food-loving, recipes around globe, culinary experience, share, recipe-sharing">
     <meta name="author" content="Tasty Tales">
     
     <!-- Bootstrap css/js CDN links -->
@@ -32,7 +36,7 @@
 
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">   
-    <title>{% block title %}TastyTales{% endblock %}</title>   
+    <title> {% block title %} TastyTales {% endblock %} </title>   
 </head>
 
 <body>
@@ -49,6 +53,7 @@
     <!-- Footer Content -->
     {% include 'includes/footer.html' %}
 
+    <!-- JavaScript Code -->
     {% block extra_js %}
     <script>
         // JavaScript timeout function for alert messages
@@ -59,7 +64,8 @@
             alert.close();
         }, 3000);
     </script>
-
     {% endblock %}
+
 </body>
+
 </html>
