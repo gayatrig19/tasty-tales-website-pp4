@@ -3,6 +3,7 @@
 {% url 'index' as index_url %}
 {% url 'recipes' as recipes_url %}
 {% url 'add_recipe' as add_recipe_url %}
+{% url 'recipe_search' as 'recipe_search_url' %}
 {% url 'recipe_drafts' as recipe_drafts_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -13,14 +14,14 @@
         <div class="container-fluid">
         <!-- Logo -->
           <a class="navbar-brand" href="{% url 'index' %}">TastyTales<i class="fa-solid fa-leaf"></i></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar Text" 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" 
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <!-- Navigation Menu -->
           <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link {% if request.path == index_url %}active" aria-current="page{% endif %}" href="{% url 'index' %}">Home</a>
               </li>
@@ -49,6 +50,13 @@
               </li>
               {% endif %}
             </ul>
+            <div class="d-flex">
+              <li class="nav-item d-inline">
+                <a class="nav-link {% if request.path == recipe_search_url %}active" aria-current="page{% endif %}" 
+                  href="{% url 'recipe_search' %}"><button class="btn btn-secondary">Search Recipes</button>
+                </a> 
+              </li>
+            </div>
           </div>
         </div>
       </nav>

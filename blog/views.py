@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views.generic import (
     TemplateView, CreateView, ListView, DeleteView, UpdateView)
+from django.db.models import Q
 from django.contrib import messages
 from .models import Recipe, Comment
 from .forms import RecipeForm, CommentForm
@@ -175,7 +176,27 @@ class UserDrafts(ListView):
        
 
         
+class RecipeSearchList(ListView):
+    model = Recipe
+    template_name = 'blog/recipe_search.html'
+    context_object_name = 'recipes'
+    paginate_by = 6
 
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        query = self.request.GET.get('q')
+        if query:
+            queryset = queryset.filter(
+                Q(title__icontains=query) |
+                Q(cuisines_type__icontains=query) |
+                Q(description__icontains=query),
+                status=1  
+            ).order_by('-created_on')
+        else:
+            # If no search query is provided, return an empty queryset
+            queryset = Recipe.objects.none()
+        return queryset
 
 
 

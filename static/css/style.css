@@ -16,7 +16,6 @@ body {
     font-weight: 450;
     color: #3a3a3a;
     background-color: #F9FAFC;
-    /* background-color: whitesmoke; */
     display: flex;
     flex-direction: column;
 }
@@ -51,12 +50,26 @@ main {
     color: #850000;
 }
 
-
 a.nav-link {
     color:#3a3a3a;
     font-family: Lato, sans-serif;
     font-weight: bold;
     font-size: 18px;
+}
+
+.nav-item .btn-secondary {
+    background-color: darkslategray;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    /* Add more styles as needed */
+}
+
+.nav-item .btn-secondary:hover {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color:rgb(43, 133, 133);    
 }
 
 .navbar-nav .nav-link.active, 
@@ -264,13 +277,47 @@ footer > a {
 }
 
 /* Error Page */
-
 .lead-text {
     line-height: 1.5;
     color: black;
     font-family: Lato, sans-serif;
     font-size: 18px;
 }
+
+/* Search Recipes Page */
+.search-form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 8px;
+    border: 1px solid black;
+    background-color:dimgray;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group {
+    flex: 1;
+    padding: 8px;
+}
+
+.search-input {
+    margin-right: 8px;
+}
+
+.search-btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+
 
 
 
