@@ -1,44 +1,43 @@
 {% extends "base.html" %}
-
-{% block title %}Recipe Detail - {{ recipe.title }} {% endblock %}
+{% block title %} Recipe Detail - {{ recipe.title }} {% endblock %}
 
 {% load crispy_forms_tags %}
+
 {% block content %}
+<!-- Recipe Detail View -->
 <div class="container">
     <div class="row align-items-start mt-5 mb-4">
-        <!-- Column with image -->
+        <!-- Column with recipe image -->
         <div class="col-12 col-lg-6 mb-4 mb-lg-0">
             {% if "placeholder" in recipe.featured_image.url %}
-            <img class="image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
+            <img class="card-image-top image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
             {% else %}
-            <img class="image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
+            <img class="card-image-top image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
             {% endif %}
         </div>
         <!-- Column with recipe details -->
         <div class="title-container col-12 col-lg-6">
             <h1>{{ recipe.title }}</h1>
             <p>Posted By: {{ recipe.author}} | {{ recipe.created_on }}</p>
-
-
+            <!-- Recipe Like/Unlike, only for authorised users -->
             <div class="row mb-3">
                 <div class="col">
                     {% if user.is_authenticated %}
                     <form method="POST" class="d-inline" action="{% url 'recipe_like' recipe.slug %}">
                         {% csrf_token %}
                         {% if liked %}
-
                         <button class="like-icon liked bg-transparent" type="submit" name="recipe_id" 
                             value="{{ recipe.slug }}" aria-label="like the recipe">
                             <strong><i class="fa-solid fa-heart"></i></strong>
                         </button>
                         {% else %}
-
                         <button class="bg-transparent like-icon" type="submit" name="recipe_id" 
                             value="{{ recipe.slug }}" aria-label="unlike the recipe">
                             <strong><i class="fa-regular fa-heart"></i></strong>
                         </button>  
                         {% endif %}             
                     </form>
+                    <!-- The icon will not have any effect when clicked by unauthorised users -->
                     {% else %}
                     <span class="like-icon">
                         <strong><i class="fa-regular fa-heart"></i></strong>
@@ -60,15 +59,12 @@
             <p><i class="fa-solid fa-globe"></i><strong> Cuisine:</strong> {{ recipe.get_cuisines_type_display }}</p>
             <p>{{ recipe.description }}</p>
             {% if user.id == recipe.author.id %}
-            <a href="{% url 'update_recipe' recipe.slug %}" id="edit-button" class="btn btn-success w-25">Edit</a>
+            <a href="{% url 'update_recipe' recipe.slug %}" id="edit-button" class="btn btn-success btn-spacing w-25">Edit</a>
             <a href="{% url 'delete_recipe' recipe.slug %}" id="delete-button" class="btn btn-danger w-25">Delete</a>
-            {% endif %}
-           
+            {% endif %}     
         </div>    
     </div>
     <hr>
-    
-
     <div class="row mt-5">
         <!-- Ingredients and Instructions -->
         <div class="col-md-6 ingredients-container">
@@ -111,7 +107,6 @@
                 Your comment is awaiting approval
             </div>
             {% else %}
-
             {% if user.is_authenticated %}
             <h4>Leave a Comment:</h4>
             <p>Posting as: {{ user.username }}</p>
@@ -121,15 +116,13 @@
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
             {% else %}
-            <p>Login now to leave a comment on or like this recipe. <a class="btn btn-primary"
-                href="{% url 'account_login' %}?next={{ request.get_full_path }}">Sign in</a>
+            <p>Login now to leave a comment or to like this recipe. <a class="btn btn-primary"
+                href="{% url 'account_login' %}?next={{ request.get_full_path }}"> Sign in</a>
             </p>
-
             {% endif %}
             {% endif %}
         </div>
     </div>
-
 </div>
 
 {% endblock content %}

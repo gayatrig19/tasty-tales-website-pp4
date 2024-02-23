@@ -1,26 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Recipes{% endblock %}
-
+{% block title %} Recipes {% endblock %}
 
 {% block content %}
+<!-- List view for published recipes, visible to all users -->
 <div class="container justify-content-center">
     <div class="row mb-5 mt-5"> 
         {% for recipe in recipes %}
         <div class="col-lg-4 col-md-6 col-12 mb-5 mx-auto">
             <div class="card h-100">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img class="recipe-image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
+                <img class="card-image-top recipe-image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
                 {% else %}
-                <img class="recipe-image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
+                <img class="card-image-top recipe-image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
                 {% endif %}
                 <div class="card-body">
                     <p class="card-text text-muted">Posted by {{recipe.author}} | {{ recipe.created_on}}</p>
-                    <h2 class="card-title">{{ recipe.title }}</h2>
-                    <p class="card-text card-content">{{ recipe.description|truncatechars:90 }}</p>
-                    <p class="card-text card-content"><strong><i class="fa-solid fa-globe"></i></strong> Cuisine: {{ recipe.get_cuisines_type_display }}</p>
-                    
+                    <h1 class="card-title">{{ recipe.title }}</h1>
+                    <p class="card-text card-content">{{ recipe.description | truncatechars:90 }}</p>
+                    <p class="card-text card-content"><strong><i class="fa-solid fa-globe"></i></strong> Cuisine: {{ recipe.get_cuisines_type_display }}</p> 
                     <hr>
                     <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-primary">View Recipe</a> 
                 </div> 
@@ -29,7 +28,7 @@
         {% endfor %}               
     </div>
     
-    
+    <!-- Pagination to display 6 recipes per page -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -47,7 +46,6 @@
     </nav>
     {% endif %}
 </div>
-
 
 {% endblock content %}
     

@@ -264,15 +264,25 @@ footer > a {
     font-size: 20px;
 }
 
+.btn-spacing {
+    margin-right: 14px;
+}
 .title-container h1,
 .ingredients-container p,
 .instructions-container p {
     word-wrap: break-word;
 }
 
-.ingredients-container p,
+.ingredients-container {
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+    color: #3a3a3a;
+}
+
 .instructions-container p {
-    font-size: 17px;
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+    color: #3a3a3a;
 }
 
 /* Error Page */

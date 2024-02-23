@@ -1,22 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
-<!-- Hero image and about -->
+<!-- Hero image and about section -->
 <div class="image-background">
     <div class="container h-100 justify-content-center">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
                 <div class="with-shadow">
                     <h1 class="display-1">Welcome to Tasty Tales</h1>
-                    <p class="lead">Here, flavour meets creativity in every bite!</p>  
+                    <p class="lead">Here, flavour meets creativity in every bite!!</p>  
                     <p class="lead">Explore delightful recipes from every corner of the world with us.
-                        Share your creations, swap tips, and savor the flavors of homemade goodness. 
-                        Let's cook up something delicious together!
+                        Share your creations, swap tips, and savor the flavours of homemade goodness. 
+                        Let's cook something delicious together!
                         {% if not user.is_authenticated %}Join us now.
                     </p>
-                    <a href="{% url 'account_signup' %}" class="btn btn-dark mt-2 mb-2">Signup Now</a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-dark mb-2">Signup Now</a>
                     {% endif %}
                 </div>
             </div>

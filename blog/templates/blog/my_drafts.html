@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-{% block title %}My Draft Recipes{% endblock %}
 {% load static %}
 
+{% block title %} My Draft Recipes {% endblock %}
 
 {% block content %}
+<!-- Draft Recipe view, only visible to logged in users -->
 <div class="container text-center justify-content-center mt-4 mb-5">
-    <h1 class="mt-5 mb-5">My Draft Recipes</h1>
-    <p></p>
+    <h1 class="display-5 mb-5">My Draft Recipes</h1>
 </div>
-
+<!-- Display message if no user draft recipes are present -->
 {% if recipe_drafts|length == 0 %}
 <div class="container-fluid text-center mt-5">
     <p>Hi, <strong>{{request.user}}</strong>!! Looks like you have no recipes saved as draft.</p>
@@ -17,30 +17,30 @@
     <p>Your draft recipes are only visible to you.</p>
 </div>
 {% endif %}
-
+<!-- Draft Recipe List View -->
 <div class="container justify-content-center">
     <div class="row mb-5 mt-5"> 
         {% for recipe in recipe_drafts %}
         <div class="col-lg-4 col-md-6 col-12 mb-5 mx-auto">
             <div class="card h-100">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img class="recipe-image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
+                <img class="card-image-top recipe-image" src="https://res.cloudinary.com/dpzitpjjc/image/upload/v1708216390/media/default-recipes-image_afutac.webp" alt="a variety of food dishes on table">
                 {% else %}
-                <img class="recipe-image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
+                <img class="card-image-top recipe-image" src="{{ recipe.featured_image.url }}" alt="recipe image of bowl of food on the table">
                 {% endif %}
                 <div class="card-body">
                     <p class="card-text text-muted"> {{ recipe.created_on}} | {{ recipe.get_status_display }}</p>
                     <h2 class="card-title">{{ recipe.title }}</h2>
-                    <p class="card-text card-content">{{ recipe.description|truncatechars:90 }}</p>
+                    <p class="card-text card-content">{{ recipe.description | truncatechars:90 }}</p>
                     <p class="card-text card-content"><strong><i class="fa-solid fa-globe"></i></strong> Cuisine: {{ recipe.get_cuisines_type_display }}</p>
                     <hr>
                     {% if user.is_authenticated %}
                     {% if user.id == recipe.author.id %}
                     <div class="mb-3">
-                    <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-primary">Update Recipe</a>
+                    <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-success">Update Recipe</a>
                     </div>
                     <div>
-                    <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-primary">Delete Recipe</a>
+                    <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete Recipe</a>
                     </div>
                     {% endif %} 
                     {% endif %}
@@ -50,7 +50,7 @@
         {% endfor %}               
     </div>
     
-    
+    <!-- Pagination to display 6 recipes per page -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -68,7 +68,6 @@
     </nav>
     {% endif %}
 </div>
-
 
 {% endblock content %}
     
