@@ -31,7 +31,7 @@
   - [Lighthouse](#lighthouse)
   - [Validator Testing](#validator-testing)
     - [HTML Validation](#html-validation)
-    - [CSS Validation][#css-validation]
+    - [CSS Validation](#css-validation)
     - [JavaScript Validation](#javascript-validation)
     - [Python Validation](#python-validation)
   - [Manual Testing](#manual-testing)
@@ -45,10 +45,23 @@
    - [Version Control](#version-control)
    - [Deployment Using Heroku](#deployment-using-heroku)
    - [Cloning the Repository](#cloning-the-repository)
-   - Forking(#forking)
+   - [Forking](#forking)
  - [Credits](#credits)
 
 
+# User Experience Design
+
+## The Strategy Plane
+
+### Site Goals
+
+
+### Agile Planning
+
+
+#### Milestones
+
+#### User Stories
 
 
 

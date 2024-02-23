@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tasty-tales-4b4d80fd4040.herokuapp.com', '8000-gayatrig19-tastytaleswe-j37n45a149o.ws-eu108.gitpod.io']
 
@@ -188,7 +188,7 @@ SUMMERNOTE_CONFIG = {
 
         'fontNames': ['Lato', 'Sans Serif'],
         'fontNamesIgnoreCheck': ['Lato', 'Sans Serif'],
-        'fontsizes': ['17'],
+        'fontsizes': ['18'],
         'fontSizeUnits': ['px'],
 
 
