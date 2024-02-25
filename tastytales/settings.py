@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tasty-tales-4b4d80fd4040.herokuapp.com', '8000-gayatrig19-tastytaleswe-j37n45a149o.ws-eu108.gitpod.io']
 
@@ -192,17 +192,17 @@ SUMMERNOTE_CONFIG = {
 
 
         # 'toolbar': [
-        #     # ['fontname', ['fontname']],
-        #     # ['fontsize', ['fontsize']],
-        #     # ['fontSizes', ['17']],
-        #     ['font', ['bold', 'italic', 'underline']],
-        #     ['para', ['ul', 'ol', 'paragraph']],
-        #     # ['style', ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']],
+            # ['fontname', ['fontname']],
+            # ['fontsize', ['fontsize']],
+            # ['fontSizes', ['17']],
+            # ['font', ['bold', 'italic', 'underline']],
+            # ['para', ['ul', 'ol', 'paragraph']],
+            # ['style', ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']],
         #     ['insert', ['link']],
         #     ['table', ['table']],
         #     ['view', ['fullscreen', 'help']],
         # ],
-        'disableResizeEditor': True,
-        'styleTags': ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+        # 'disableResizeEditor': True,
+        # 'styleTags': ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
     },
 }
