@@ -35,6 +35,7 @@ def validate_nonzero(value):
             params={'value': value},
         )
 
+
 class Recipe(models.Model):
     """
     A recipe model to create and display recipes added by users.
@@ -62,7 +63,6 @@ class Recipe(models.Model):
         max_length=60, choices=CUISINES_TYPE, default="Asian"
     )
 
-    
     class Meta:
         ordering = ['-created_on']
 
@@ -81,13 +81,11 @@ class Recipe(models.Model):
         super(Recipe, self).save(*args, **kwargs)
 
 
-
 class Comment(models.Model):
     """
     A Comment Model to create and handle comments added by users
     Before the comment is published, it needs to be approved by admin
     """
-
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     comment_author = models.ForeignKey(User, on_delete=models.CASCADE)
     comment_body = models.TextField()
@@ -100,7 +98,3 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment by {self.comment_author}"
     
-
-
-
-

@@ -5,7 +5,7 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class RecipeForm(forms.ModelForm):
     """
-    Form to create/add new recipes
+    Recipe Form to create/add new recipes
     """
     class Meta:
         model = Recipe
@@ -49,6 +49,9 @@ class RecipeForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Comment Form to add comments
+    """
     class Meta:
         model = Comment
         fields = ('comment_body',)
