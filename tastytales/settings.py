@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['tasty-tales-4b4d80fd4040.herokuapp.com', '8000-gayatrig19-tastytaleswe-j37n45a149o.ws-eu108.gitpod.io']
 
@@ -160,7 +160,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -178,7 +177,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# django_summernot config
+# django_summernote config
 SUMMERNOTE_CONFIG = {
     'summernote': {
         # Change editor size
@@ -190,19 +189,6 @@ SUMMERNOTE_CONFIG = {
         'fontsizes': ['18'],
         'fontSizeUnits': ['px'],
 
-
-        # 'toolbar': [
-            # ['fontname', ['fontname']],
-            # ['fontsize', ['fontsize']],
-            # ['fontSizes', ['17']],
-            # ['font', ['bold', 'italic', 'underline']],
-            # ['para', ['ul', 'ol', 'paragraph']],
-            # ['style', ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']],
-        #     ['insert', ['link']],
-        #     ['table', ['table']],
-        #     ['view', ['fullscreen', 'help']],
-        # ],
-        # 'disableResizeEditor': True,
-        # 'styleTags': ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+        'disableResizeEditor': True,
     },
 }
