@@ -59,9 +59,11 @@
         // JavaScript timeout function for alert messages
         // Credit: Code Institute's I think therefore I blog Walkthrough project 
         setTimeout(function () {
-            let messages = document.getElementById('msg');
+            let messages = document.getElementById('alert');
             let alert = new bootstrap.Alert(messages);
-            alert.close();
+            if (messages != undefined) {
+                alert.close();
+            }     
         }, 3000);
     </script>
     {% endblock %}

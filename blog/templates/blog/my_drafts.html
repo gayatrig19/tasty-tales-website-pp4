@@ -7,14 +7,15 @@
 <!-- Draft Recipe view, only visible to logged in users -->
 <div class="container text-center justify-content-center mt-4 mb-5">
     <h1 class="display-5 mb-5">My Draft Recipes</h1>
+    <p>Hi, <strong>{{request.user}}</strong>!! Your can see your recipes saved as draft here.</p>
+    <p>Your draft recipes are only visible to you. You can update and save or publish them as you like.</p>
+    <p>Craft happiness out of every dish. Enjoy!!!</p>
 </div>
 <!-- Display message if no user draft recipes are present -->
 {% if recipe_drafts|length == 0 %}
 <div class="container-fluid text-center mt-5">
-    <p>Hi, <strong>{{request.user}}</strong>!! Looks like you have no recipes saved as draft.</p>
-    <p>You can create your recipes and save for later to edit on this page. 
-    </p> 
-    <p>Your draft recipes are only visible to you.</p>
+    <p>Looks like you have no recipes saved as draft.</p>
+    <p>You can create your recipes and save for later to edit on this page.</p>     
 </div>
 {% endif %}
 <!-- Draft Recipe List View -->
@@ -37,10 +38,7 @@
                     {% if user.is_authenticated %}
                     {% if user.id == recipe.author.id %}
                     <div class="mb-3">
-                    <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-success">Update Recipe</a>
-                    </div>
-                    <div>
-                    <a href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete Recipe</a>
+                    <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-success">Update Draft</a>
                     </div>
                     {% endif %} 
                     {% endif %}

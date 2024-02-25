@@ -10,7 +10,7 @@ class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = [
-            'title',
+            'title', 
             'description', 
             'featured_image', 
             'ingredients', 
@@ -26,7 +26,7 @@ class RecipeForm(forms.ModelForm):
             'ingredients': SummernoteWidget(),
             'instructions': SummernoteWidget(), 
             'description': forms.Textarea(
-                attrs={'rows': 5, 'placeholder': 'Describe your recipe in short here'}),
+                attrs={'rows': 5, 'placeholder': 'Describe your recipe here'}),
             'prep_time': forms.NumberInput(
                 attrs={'placeholder': 'Preparation time is counted in minutes'}),
             'cooking_time': forms.NumberInput(

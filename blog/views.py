@@ -90,7 +90,6 @@ class RecipeDetail(View):
         )
 
 
-
 class AddRecipe(LoginRequiredMixin, CreateView):
     """
     View to add/create recipes
@@ -117,7 +116,7 @@ class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     form_class = RecipeForm
     template_name = "blog/update_recipe.html"
     success_url = reverse_lazy('recipes')
-   
+
 
     def test_func(self):
         return self.request.user == self.get_object().author
@@ -128,7 +127,6 @@ class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         messages.add_message(self.request, messages.SUCCESS, success_message)
         return super().form_valid(form)
 
-
     
 class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
@@ -136,7 +134,7 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     model = Recipe
     success_url = reverse_lazy('recipes')
-
+   
     def test_func(self):
         return self.request.user == self.get_object().author
       
@@ -144,7 +142,6 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         success_message = "Your recipe has been deleted successfully."
         messages.add_message(self.request, messages.SUCCESS, success_message)
         return super().delete(request, *args, **kwargs)
-
 
 
 class RecipeLike(View):
@@ -160,7 +157,6 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-
 class UserDrafts(ListView):
     """
     Class based views to view users own recipes
@@ -174,7 +170,6 @@ class UserDrafts(ListView):
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user, status=0)
        
-
         
 class RecipeSearchList(ListView):
     model = Recipe
@@ -197,10 +192,4 @@ class RecipeSearchList(ListView):
             # If no search query is provided, return an empty queryset
             queryset = Recipe.objects.none()
         return queryset
-
-
-
-
-
-
 
