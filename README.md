@@ -73,8 +73,31 @@ The website is aimed for everyone who loves cooking and exploring cuisines from 
 - With a visually appealing, clean and earthy design, the site inspires and delights users, whether they are browsing on a desktop or a mobile device.
 
 
-
 ### Agile Planning
+
+<details><summary>Issues Template</summary>
+
+
+![issue template](documentation/docs_images/issue_template.png)
+
+</details>
+
+
+<details><summary>Issues List</summary>
+
+
+![issues](documentation/docs_images/issues_list.png)
+
+</details>
+
+
+<details><summary>Project Board</summary>
+
+
+![project board](documentation/docs_images/project_board.png)
+
+</details>
+
 
 
 #### Milestones
