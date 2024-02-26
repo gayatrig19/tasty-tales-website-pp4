@@ -38,7 +38,7 @@
                     {% if user.is_authenticated %}
                     {% if user.id == recipe.author.id %}
                     <div class="mb-3">
-                    <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-success">Update Draft</a>
+                    <a href="{% url 'update_recipe' recipe.slug %}" class="btn btn-success">Update Recipe</a>
                     </div>
                     {% endif %} 
                     {% endif %}
