@@ -9,7 +9,7 @@
     <h1 class="display-6 mt-3 mb-3 text-center">Search Recipes here..</h1>
     <form action="{% url 'recipe_search' %}" method="GET" class="search-form" role="search">
         <div class="input-group">
-            <input type="text" class="form-control search-input" placeholder="Search by title, description, cuisine..." name="q"
+            <input type="text" class="form-control search-input" placeholder="Search by title, keyword, cuisine..." name="q"
                 value="{{ request.GET.q }}" aria-label="Search Recipes">
             <button class="btn btn-primary search-btn" type="submit">Search</button>
         </div>    
@@ -58,7 +58,7 @@
     {% endif %}
 
     {% if not recipes and not request.GET.q %}
-    <p class="text-center mt-4">Please enter recipe title, description or cuisine to find your next tasty recipe.</p>
+    <p class="text-center mt-4">Please enter recipe title, keyword or cuisine to find your next tasty recipe.</p>
     {% endif %}
     
     <!-- Recipe List view Pagination -->
