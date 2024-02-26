@@ -7,6 +7,12 @@ Tasty Tales is a full stack web application that gives user a platform to view a
 
 - The website is built using HTML, CSS, JavaScript, Python and the Django framework as a Portfolio Project#4 for the Code Institute's Full Stack Software Development Course.
 
+            Website Image goes here
+
+
+## The live website link goes here
+
+------
 
 ## Table of Contents
 
@@ -61,6 +67,11 @@ Tasty Tales is a full stack web application that gives user a platform to view a
 ## The Strategy Plane
 
 ### Site Goals
+
+The website is aimed for everyone who loves cooking and exploring cuisines from all around the globe. The site also aims at people who are simply searching for an inspiration on days when they simply want to try something new and discover a diverse recipes. The application aims to provide a vibrant and engaging platform for food enthusiasts to explore, share and indulge in culinary delights. Through a user-friendly interface, users can discover a diverse range of recipes tailored to their tastes and love for a variety of cuisines. 
+- The site allows users to share their favourite recipes, exchange cooking tips and connect with food-loving like-minded individuals. 
+- With a visually appealing, clean and earthy design, the site inspires and delights users, whether they are browsing on a desktop or a mobile device.
+
 
 
 ### Agile Planning
