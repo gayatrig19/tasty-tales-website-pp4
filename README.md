@@ -29,8 +29,8 @@ Tasty Tales is a full stack web application that gives user a platform to view a
       - [Features Left to Implement](#features-left-to-implement)
    - [The Skeleton Plane](#the-skeleton-plane)
     - [Wireframes](#wireframes)
-      - [Desktop](#desktop)
-      - [Mobile](#mobile)
+      - [Desktop Wireframes](#desktop-wireframes)
+      - [Mobile Wireframes](#mobile-wireframes)
     - [Database Design](#database-design)
    - [The Surface Plane](#the-surface-plane)
     - [Design/ Colour-Scheme/ Font/ Images](#design-colour-scheme-font-images)
@@ -224,69 +224,116 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 ### Wireframes
 
-#### Desktop
-Wireframes for Large Screen 
+#### Desktop Wireframes
+Wireframes for Large Screen Sizes 
 
-##### Home Page (authorised / unauthorised users)
+#### Home Page (authorised / unauthorised users)
      
 ![home-page-authorised-users-desktop-wireframe](documentation/docs_images/home-page-authorised-users-wireframe-desktop.png)
 
 ![home-page-unauthorised-users-desktop-wireframe](documentation/docs_images/home-page-unauthorised-users-wireframe-desktop.png)
 
 
-##### Recipes Page
+#### Recipes Page
 The recipes page is accessible to all users.
 
 ![recipe-page-wireframe-desktop](documentation/docs_images/recipe-page-wireframe-desktop.png)
 
 
-##### Recipe Details Page (authorised / unauthorised users)
+#### Recipe Details Page (authorised / unauthorised users)
 
 ![recipe-details-page-authorised-wireframe-desktop](documentation/docs_images/recipe-details-authorised-wireframe-desktop.png)
 
 ![recipe-details-page-unauthorised-wireframe-desktop](documentation/docs_images/recipe-details-unauthorised-wireframe-desktop.png)
 
 
-##### My Drafts Page (for authorised users only)
+#### My Drafts Page (for authorised users only)
 
 ![my-drafts-page-wireframe-desktop](documentation/docs_images/draft-recipes-page-wireframe-desktop.png)
 
 
-##### Search Recipes Page 
+#### Search Recipes Page 
 Search Recipes page is accessible to all users.
 
 ![search-recipes-page-wireframe-desktop](documentation/docs_images/search-recipe-wireframe-desktop.png)
 
 
-##### Add Recipe Page (for authorised users only)
+#### Add Recipe Page (for authorised users only)
 
 ![add-recipe-page-wireframe-desktop](documentation/docs_images/add-recipe-wireframe-desktop.png)
 
 
-##### Edit Recipe Page (for authorised users only)
+#### Edit Recipe Page (for authorised users only)
 
 ![update-recipe-page-wireframe-desktop](documentation/docs_images/update-recipe-wireframe-desktop.png)
 
 
-##### Delete Recipe Page (for authorised users only)
+#### Delete Recipe Page (for authorised users only)
 
 ![delete-recipe-page-wireframe-desktop](documentation/docs_images/delete-recipe-confirm-wireframe-desktop.png)
 
 
-##### Sign Up and Sign In Page (for unauthorised users only)
+#### Sign Up and Sign In Page (for unauthorised users only)
 
 ![sign-up-page-wireframe-desktop](documentation/docs_images/sign-up-wireframe-desktop.png)
 
 ![sign-in-page-wireframe-desktop](documentation/docs_images/sign-in-wireframe-desktop.png)
 
 
-##### Log Out Page (for authorised users only)
+#### Log Out Page (for authorised users only)
 
 ![log-out-page-wireframe-desktop](documentation/docs_images/log-out-wireframe-desktop.png)
 
 
+#### Mobile Wireframes
+Wireframes for Small Screen Sizes
+
+#### Home Page (authorised / unauthorised users)
+     
+![home-page-authorised-users-mobile-wireframe](documentation/docs_images/home-page-authorised-wireframe-mobile.png)
+
+![home-page-unauthorised-users-mobile-wireframe](documentation/docs_images/home-page-unauthorised-wireframe-mobile.png)
 
 
+#### Recipes Page
+The recipes page is accessible to all users.
+
+![recipe-page-wireframe-mobile](documentation/docs_images/recipe-page-wireframe-mobile.png)
+
+
+#### Recipe Details Page (authorised / unauthorised users)
+
+![recipe-details-page-authorised-wireframe-mobile](documentation/docs_images/recipe-detail-authorised-page-wireframe-mobile.png)
+
+![recipe-details-page-unauthorised-wireframe-mobile](documentation/docs_images/recipe-detail-unauthorised-page-wireframe-mobile.png)
+
+
+#### My Drafts Page (for authorised users only)
+
+![my-drafts-page-wireframe-mobile](documentation/docs_images/draft-recipe-page-wireframe-mobile.png)
+
+
+#### Search Recipes Page 
+Search Recipes page is accessible to all users.
+
+![search-recipes-page-wireframe-mobile](documentation/docs_images/search-page-wireframe-mobile.png)
+
+
+#### Add Recipe Page (for authorised users only)
+
+![add-recipe-page-wireframe-mobile](documentation/docs_images/add-recipe-page-wireframe-mobile.png)
+
+
+#### Sign Up and Sign In Page (for unauthorised users only)
+
+![sign-up-page-wireframe-mobile](documentation/docs_images/sign-up-page-wireframe-mobile.png)
+
+![sign-in-page-wireframe-mobile](documentation/docs_images/sign-in-page-wireframe-mobile.png)
+
+
+#### Log Out Page (for authorised users only)
+
+![log-out-page-wireframe-mobile](documentation/docs_images/logout-page-wireframe-mobile.png)
 
 
 
