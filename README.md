@@ -110,8 +110,27 @@ I employed the Agile methodology and utilized a GitHub project board to organize
 </details>
 
 
-
 #### Milestones
+
+- **1 - Initial Project Setup:**
+  The first task in starting the project was to setup it up. All the tasks from setting up github repository to installing django, setting up django app and related packages and libraries were included in this milestone. The acceptance criteria was refined for each of the setup to be completed for clarity and ease of understanding. 
+
+- **2 - User Authentication:**
+This milestone covers user authentication and authorization i.e. user sign-up, sign-in and logout so that user can explore complete features and functionality of the website.
+
+- **3 - User Interface Design (UX/UI):**
+The website to be user-friendly and responsive on all devices, this milestone covers the styling aspects of the site, from website pagination to responsiveness and error pages so that user has smooth experience throughout the application.
+
+- **4 - Admin Functionality:** 
+Includes admin dashboard functionality so that admin can monitor the website for users, recipes and comments. This milestone was included to keep the admin and site user functionality separate for clarity. 
+- **5 - Recipe Post Functions:**
+All the CRUD functionality and features related to recipes (comments, likes) is included here.
+- **6 - Project Documentation:**
+This milestone was needed so that I can document my project in-depth with all website features, testing, deployment information.
+- **7 - Final Project Deployment:**
+Included as it was absolutely necessary and important to have a live link of fully functional website with no errors so that everyone can have access to the application.
+
+
 
 #### User Stories
 
