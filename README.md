@@ -75,6 +75,17 @@ The website is aimed for everyone who loves cooking and exploring cuisines from 
 
 ### Agile Planning
 
+I employed the Agile methodology and utilized a GitHub project board to organize and develop my user stories starting from the project planning stage and continuing until the final product was built. To enhance clarity and structure, a user story template is designed that precisely outlines each user story with an acceptance criteria to be fulfilled. Small features have been assigned to 7 milestones.
+
+- All User Stories include:
+   - Acceptance Criteria
+   - Labels (MoSCoW Prioritization)
+- Labels have been used to mark which features the project : 'must have', 'should have', 'could have' and 'nice to have'. The prioritization was done so that a MVP for the project is created in time I have and only focus on the 'should haves' or 'could haves' if the time allows.
+- Each User story was checked for the acceptance criteria have been met and closed.
+
+- The detailed Project Board with all user stories can be found here. [PROJECT BOARD-link](https://github.com/gayatrig19/tasty-tales-website-pp4/projects?query=is%3Aopen)
+
+
 <details><summary>Issues Template</summary>
 
 
