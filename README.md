@@ -228,15 +228,61 @@ Each Milestone covers the user stories for small features allowing me to priorit
 Wireframes for Large Screen 
 
 ##### Home Page (authorised / unauthorised users)
-   
-
+     
 ![home-page-authorised-users-desktop-wireframe](documentation/docs_images/home-page-authorised-users-wireframe-desktop.png)
-
 
 ![home-page-unauthorised-users-desktop-wireframe](documentation/docs_images/home-page-unauthorised-users-wireframe-desktop.png)
 
 
+##### Recipes Page
+The recipes page is accessible to all users.
 
+![recipe-page-wireframe-desktop](documentation/docs_images/recipe-page-wireframe-desktop.png)
+
+
+##### Recipe Details Page (authorised / unauthorised users)
+
+![recipe-details-page-authorised-wireframe-desktop](documentation/docs_images/recipe-details-authorised-wireframe-desktop.png)
+
+![recipe-details-page-unauthorised-wireframe-desktop](documentation/docs_images/recipe-details-unauthorised-wireframe-desktop.png)
+
+
+##### My Drafts Page (for authorised users only)
+
+![my-drafts-page-wireframe-desktop](documentation/docs_images/draft-recipes-page-wireframe-desktop.png)
+
+
+##### Search Recipes Page 
+Search Recipes page is accessible to all users.
+
+![search-recipes-page-wireframe-desktop](documentation/docs_images/search-recipe-wireframe-desktop.png)
+
+
+##### Add Recipe Page (for authorised users only)
+
+![add-recipe-page-wireframe-desktop](documentation/docs_images/add-recipe-wireframe-desktop.png)
+
+
+##### Edit Recipe Page (for authorised users only)
+
+![update-recipe-page-wireframe-desktop](documentation/docs_images/update-recipe-wireframe-desktop.png)
+
+
+##### Delete Recipe Page (for authorised users only)
+
+![delete-recipe-page-wireframe-desktop](documentation/docs_images/delete-recipe-confirm-wireframe-desktop.png)
+
+
+##### Sign Up and Sign In Page (for unauthorised users only)
+
+![sign-up-page-wireframe-desktop](documentation/docs_images/sign-up-wireframe-desktop.png)
+
+![sign-in-page-wireframe-desktop](documentation/docs_images/sign-in-wireframe-desktop.png)
+
+
+##### Log Out Page (for authorised users only)
+
+![log-out-page-wireframe-desktop](documentation/docs_images/log-out-wireframe-desktop.png)
 
 
 
