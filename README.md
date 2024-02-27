@@ -336,10 +336,25 @@ Search Recipes page is accessible to all users.
 ![log-out-page-wireframe-mobile](documentation/docs_images/logout-page-wireframe-mobile.png)
 
 
+### Database Design
+
+![Entity-Relationship-Diagram](documentation/docs_images/entity-relationship-diagram.png)
 
 
+- The database ER diagram was designed using SmartDraw. The main Recipe model contains all the fields needed for the recipe to be complete. Additional fields (like category, nutritional value, meals type., etc) can be added to further enhance the website, but the values are not vital for the site to work and can be added later.
+- The diagram shows relationaships between the Recipe model, Comments Model and django's allauth User model as follows:
+   1. User to Recipe: One-to-Many (1:M)
+       - Each user can create multiple recipes.
+       - Each recipe is created by one user.
+   2. Recipe to Comment: One-to-Many (1:M)
+       - Each recipe can have multiple comments.
+       - Each comment is associated with one recipe.
+   3. User to Comment: One-to-Many (1:M)
+       - Each user can make multiple comments.
+       - Each comment is made by one user.
 
-
+- In summary, User can create multiple recipes, and each recipe is associated with one user. Recipe can have multiple comments, and each comment is associated with one recipe. User can make multiple comments, and each comment is made by one user.
+- These relationships was implemented using ForeignKey fields in the models. The Recipe model have a ForeignKey field referencing the User model to represent the creator of the recipe, and the Comment model have ForeignKey fields referencing both the Recipe model and the User model to represent the recipe being commented on and the user making the comment, respectively.
 
 
 
