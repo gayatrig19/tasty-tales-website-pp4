@@ -131,8 +131,64 @@ This milestone was needed so that I can document my project in-depth with all we
 Included as it was absolutely necessary and important to have a live link of fully functional website with no errors so that everyone can have access to the application.
 
 
-
 #### User Stories
+
+Each Milestone covers the user stories for small features allowing me to prioritize the most important ones to least in project development.
+
+- **Milestone 1 - Initial Project Setup:**
+    - As a developer, I need to set up the recipe blog project with all the necessary components and configurations so that I can ensure a smooth development and deployment process.
+       - Initialize and setup a GitHub repository with a README file using CI Gitpod template.
+       - Install the latest version of Django.
+       - Create a new Django project.
+       - Add main app.
+       - Verify that the project runs without errors using the Django development server.
+       - Add a requirements.txt file listing all project dependencies.
+       - Add env.py file to store sensitive information.
+       - Add Procfile
+       - Implement a proper media storage configuration for user-uploaded images.
+            - image database: Cloudinary
+       - Configure the project to use a ElephantSQL database.
+       - Update the settings.py file to notify Django of the installed supporting libraries .
+       - Deploy project to Heroku to test deployment is successful.
+
+    - As a developer, I need to create a base.html file so that I can have a basic structure of the page for the project.
+    - As a developer, I need to add static files and media so that I can build the website to be user friendly, interesting and responsive to all screen sizes.
+    - As a developer, I need to create a navigation menu so that a website user can easily navigate through the site pages and content.
+       - Home Page - for all users
+       - Browse Recipes Page - for all users
+       - Signup Page - for unauthorised user's registration
+       - Login Page - for users already registered
+       - Logout Page - for authorised users
+       - User Drafts Recipe Page - for authorised users
+       - Create new recipes Page - for authorised users
+    - As a developer, I need to create a footer so that I can include social media links, contact links and relevant site information about the website.
+
+- **Milestone 2 - User Authentication:**
+    - As a developer, I need to setup allauth so that users can have an option to register and sign-in to the website for exploring more features.
+      - Install allauth
+      - Implement register, login and logout functionality
+      - Verify that users can register/ login and logout of their account with an appropriate message displayed.
+    - As a Site User I can register an account so that I can access publishing, commenting and like/unlike features.
+
+- **Milestone 3 - User Interface Design (UX/UI):**
+    - As a developer, I need to create a home page so that the user can quickly understand what the recipe blog offers and navigate easily to find interesting recipes.
+    - As a User, I can navigate between pages easily, so that I can explore the website content without any chaos.
+    - As a developer, I want to style the allauth authentication pages(signup, login and logout pages) so that they are visually consistent with the rest of the website and provide a seamless user experience.
+    - As a Site User, I can get corresponding feedback after taking an action so that I know whether my actions were successfully run or not.
+    - As a User, I want to be directed to a 403 error page when attempting to access content or functionality that I am not authorized to view, so that I am aware of my access limitations and can take appropriate action.
+    - As a User, I want to be directed to a custom 404 page when I navigate to a broken link or URL that does not exist, so that I am informed that the page I am looking for is not available and can be directed to other relevant sections of the website.
+    - As a user, I am notified in case of an internal error so that I can understand what went wrong and how to proceed.
+
+- **Milestone 4 - Admin Functionality:** 
+   - As a developer, I need to create a superuser so that I can manage the website efficiently and ensure the quality and organization of content on the website.
+   - As a Site Admin I can create, read, update and delete recipe posts so that I can manage my recipe blog content.
+   - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
+
+- **Milestone 5 - Recipe Post Functions:**
+
+
+
+
 
 
 
