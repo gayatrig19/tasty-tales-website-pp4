@@ -29,7 +29,8 @@ Tasty Tales is a full stack web application that gives user a platform to view a
       - [Features Left to Implement](#features-left-to-implement)
    - [The Skeleton Plane](#the-skeleton-plane)
     - [Wireframes](#wireframes)
-     - [Desktop and Mobile](#desktop-and-mobile)
+      - [Desktop](#desktop)
+      - [Mobile](#mobile)
     - [Database Design](#database-design)
    - [The Surface Plane](#the-surface-plane)
     - [Design/ Colour-Scheme/ Font/ Images](#design-colour-scheme-font-images)
@@ -118,13 +119,15 @@ I employed the Agile methodology and utilized a GitHub project board to organize
 - **2 - User Authentication:**
 This milestone covers user authentication and authorization i.e. user sign-up, sign-in and logout so that user can explore complete features and functionality of the website.
 
-- **3 - User Interface Design (UX/UI):**
+- **3 - Recipe Post Functions:**
+All the CRUD functionality and features related to recipes (comments, likes) is included here.
+
+- **4 - User Interface Design (UX/UI):**
 The website to be user-friendly and responsive on all devices, this milestone covers the styling aspects of the site, from website pagination to responsiveness and error pages so that user has smooth experience throughout the application.
 
-- **4 - Admin Functionality:** 
+- **5 - Admin Functionality:** 
 Includes admin dashboard functionality so that admin can monitor the website for users, recipes and comments. This milestone was included to keep the admin and site user functionality separate for clarity. 
-- **5 - Recipe Post Functions:**
-All the CRUD functionality and features related to recipes (comments, likes) is included here.
+
 - **6 - Project Documentation:**
 This milestone was needed so that I can document my project in-depth with all website features, testing, deployment information.
 - **7 - Final Project Deployment:**
@@ -170,7 +173,19 @@ Each Milestone covers the user stories for small features allowing me to priorit
       - Verify that users can register/ login and logout of their account with an appropriate message displayed.
     - As a Site User I can register an account so that I can access publishing, commenting and like/unlike features.
 
-- **Milestone 3 - User Interface Design (UX/UI):**
+- **Milestone 3 - Recipe Post Functions:**
+   - As a logged-in User, I can create/publish recipes so that I can share recipes that I find delicious with others.
+   - As a logged-in User, I can edit the recipes that I have shared so that I can correct and update the recipe details if necessary.
+   - As a logged-in User, I can delete my recipes so that they are no longer published on the site.
+   - As a Site User, I can view and read the detailed recipes shared/published by others so that I can get some inspiration.
+   - As a Site User, I can view a paginated list of recipe posts so that I can select which recipes I want to view.
+   - As a logged-in User, I can go to a page to view only my recipes so that I can easily access them if needed.
+   - As a Site User, I can search recipes so that I can only view recipes I am interested in.
+   - As a Site User, I can leave comments on recipes so that I can interact with others/share my opinion.
+   - As a Site User, I can view comments on an individual recipe post so that I can read the conversation.
+   - As a logged-in User, I can like/unlike others' recipes so that I can interact with the content.
+
+- **Milestone 4 - User Interface Design (UX/UI):**
     - As a developer, I need to create a home page so that the user can quickly understand what the recipe blog offers and navigate easily to find interesting recipes.
     - As a User, I can navigate between pages easily, so that I can explore the website content without any chaos.
     - As a developer, I want to style the allauth authentication pages(signup, login and logout pages) so that they are visually consistent with the rest of the website and provide a seamless user experience.
@@ -179,12 +194,48 @@ Each Milestone covers the user stories for small features allowing me to priorit
     - As a User, I want to be directed to a custom 404 page when I navigate to a broken link or URL that does not exist, so that I am informed that the page I am looking for is not available and can be directed to other relevant sections of the website.
     - As a user, I am notified in case of an internal error so that I can understand what went wrong and how to proceed.
 
-- **Milestone 4 - Admin Functionality:** 
+- **Milestone 5 - Admin Functionality:** 
    - As a developer, I need to create a superuser so that I can manage the website efficiently and ensure the quality and organization of content on the website.
    - As a Site Admin I can create, read, update and delete recipe posts so that I can manage my recipe blog content.
    - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
 
-- **Milestone 5 - Recipe Post Functions:**
+- **Milestone 6 - Project Documentation:**
+   - As a developer, I need to create readme.md file so that the project is documented in detail.
+
+- **Milestone 7 - Final Project Deployment:**
+   - As a developer, I need to make sure the project is deployed to heroku so that everything works and looks as expected.
+
+
+## The Structure Plane
+
+### Features
+
+### Existing Features
+
+
+
+
+### Features left to implement
+
+
+
+
+## The Skeleton Plane
+
+### Wireframes
+
+#### Desktop
+Wireframes for Large Screen 
+
+##### Home Page (authorised / unauthorised users)
+   
+
+![home-page-authorised-users-desktop-wireframe](documentation/docs_images/home-page-authorised-users-wireframe-desktop.png)
+
+
+![home-page-unauthorised-users-desktop-wireframe](documentation/docs_images/home-page-unauthorised-users-wireframe-desktop.png)
+
+
 
 
 
