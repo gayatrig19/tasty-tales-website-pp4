@@ -33,7 +33,7 @@ Tasty Tales is a full stack web application that gives user a platform to view a
       - [Mobile Wireframes](#mobile-wireframes)
     - [Database Design](#database-design)
    - [The Surface Plane](#the-surface-plane)
-    - [Design/ Colour-Scheme/ Font/ Images](#design-colour-scheme-font-images)
+    - [Design](#design)
  - [Technologies](#technologies)
    - [Tools and Technologies](#tools-and-technologies)
    - [Imports](#imports)
@@ -341,7 +341,7 @@ Search Recipes page is accessible to all users.
 ![Entity-Relationship-Diagram](documentation/docs_images/entity-relationship-diagram.png)
 
 
-- The database ER diagram was designed using SmartDraw. The main Recipe model contains all the fields needed for the recipe to be complete. Additional fields (like category, nutritional value, meals type., etc) can be added to further enhance the website, but the values are not vital for the site to work and can be added later.
+- The database ER diagram was designed using [SmartDraw](https://www.smartdraw.com/entity-relationship-diagram/). The main Recipe model contains all the fields needed for the recipe to be complete. Additional fields (like category, nutritional value, meals type., etc) can be added to further enhance the website, but the values are not vital for the site to work and can be added later.
 - The diagram shows relationaships between the Recipe model, Comments Model and django's allauth User model as follows:
    1. User to Recipe: One-to-Many (1:M)
        - Each user can create multiple recipes.
@@ -357,7 +357,20 @@ Search Recipes page is accessible to all users.
 - These relationships was implemented using ForeignKey fields in the models. The Recipe model have a ForeignKey field referencing the User model to represent the creator of the recipe, and the Comment model have ForeignKey fields referencing both the Recipe model and the User model to represent the recipe being commented on and the user making the comment, respectively.
 
 
+## The Surface Plane
+
+### Design
+
+The website uses clean, simple design with earthy colours and images that showcases the primary goal of the website. The aim here was to keep the site clutter-free so that user can have a smooth straight-forward navigation experience throughout without any chaos and confusion.
+
+#### Typography
+
+- [Oswald](https://fonts.google.com/specimen/Oswald?query=oswald) was chosen for logo and headings as it can be combined easily with other fonts. It is attractive and amenable for the heading content on site. Because it is slightly elongated, it brings contrast to a typography combination. With website consideration it was best suited as it gives both modern and a serious touch to the content throughout on pages.
+
+- [Lato](https://fonts.google.com/specimen/Lato?query=Lato) was chosen for body text as it is light and easy to read.
 
 
+#### Images
 
+- The images in this project are sourced from [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/) and [Pixabay](https://pixabay.com/). They were specifically selected to correlate with the main purpose of the website and to give user a imagery representation for the recipe content to increase impact of the design.
 
