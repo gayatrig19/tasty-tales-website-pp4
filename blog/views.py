@@ -117,7 +117,7 @@ class AddRecipe(LoginRequiredMixin, CreateView):
     template_name = "blog/add_recipe.html"
     success_url = reverse_lazy('recipes')
 
-    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post #noqa
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
     def form_valid(self, form):
         form.instance.author = self.request.user
         success_message = "Your recipe has been posted successfully."
@@ -148,7 +148,7 @@ class UpdateRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         messages.add_message(self.request, messages.SUCCESS, success_message)
         return super().form_valid(form)
 
-    
+
 class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     Class based view to delete recipe.
@@ -158,10 +158,10 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     model = Recipe
     success_url = reverse_lazy('recipes')
-   
+
     def test_func(self):
         return self.request.user == self.get_object().author
-      
+
     def form_valid(self, request, *args, **kwargs):
         success_message = "Your recipe has been deleted successfully."
         messages.add_message(self.request, messages.SUCCESS, success_message)
@@ -183,7 +183,7 @@ class RecipeLike(View):
         if recipe.likes.filter(id=request.user.id).exists():
             recipe.likes.remove(request.user)
         else:
-            recipe.likes.add(request.user) 
+            recipe.likes.add(request.user)
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
@@ -203,8 +203,8 @@ class UserDrafts(ListView):
 
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user, status=0)
-       
-        
+
+
 class RecipeSearchList(ListView):
     """
     View to display a list of recipes based on user search.
@@ -225,9 +225,8 @@ class RecipeSearchList(ListView):
                 Q(title__icontains=query) |
                 Q(cuisines_type__icontains=query) |
                 Q(description__icontains=query),
-                status=1  
+                status=1
             ).order_by('-created_on')
         else:
             queryset = Recipe.objects.none()
         return queryset
-

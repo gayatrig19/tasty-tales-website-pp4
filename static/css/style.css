@@ -48,7 +48,7 @@ main {
 /* Logo */
 .navbar-brand {
     font-family: Oswald, sans-serif;
-    font-style: bold;
+    font-weight: bold;
     font-size: 35px;
     letter-spacing: 1px;
     color: rgb(10, 32, 10);

@@ -18,7 +18,7 @@ CUISINES_TYPE = (
     ("latin_american", "Latin American"),
     ("middle_eastern", "Middle Eastern"),
     ("mexican", "Mexican"),
-    ("oceanic", "Oceanic"),       
+    ("oceanic", "Oceanic"),
 )
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -40,7 +40,8 @@ class Recipe(models.Model):
     """
     A recipe model to create and display recipes added by users.
     """
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_owner')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='recipe_owner')
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     description = models.CharField(max_length=700, null=False, blank=False)
@@ -53,7 +54,8 @@ class Recipe(models.Model):
     likes = models.ManyToManyField(User, default=None, blank=True,
                                    related_name='recipe_likes')
     prep_time = models.PositiveIntegerField(
-        'prep_time', validators=[validate_nonzero, MaxValueValidator(300)], default=15)                              
+        'prep_time', validators=[
+            validate_nonzero, MaxValueValidator(300)], default=15)                              
     cooking_time = models.PositiveIntegerField(
         'cooking_time', validators=[
             validate_nonzero, MaxValueValidator(600)], default=15)
@@ -86,7 +88,8 @@ class Comment(models.Model):
     A Comment Model to create and handle comments added by users
     Before the comment is published, it needs to be approved by admin
     """
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments")
     comment_author = models.ForeignKey(User, on_delete=models.CASCADE)
     comment_body = models.TextField()
     approved = models.BooleanField(default=False)
@@ -97,4 +100,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.comment_author}"
-    
