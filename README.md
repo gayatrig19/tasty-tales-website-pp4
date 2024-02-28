@@ -379,7 +379,73 @@ Each Milestone covers the user stories for small features allowing me to priorit
 ![search-not-found-page-view](documentation/docs_images/search-not-found-page-view.png)
 
 - The search recipes page allows users to search recipes by title, keyword and cuisines. This page is accessible throughout the website and to all users.
+- If the user search results are not found, a message for refining search is provided. Also user is encouraged to share own recipes or view all recipes.
+- If search query is not provided by user, the page is loaded with message to search bu recipe title, keyword and cuisines.
 
+
+#### Comment Section
+
+- As a Site User, I can leave comments on recipes so that I can interact with others/share my opinion. **(User Story#15) (should have)**
+
+- As a Site User, I can view comments on an individual recipe post so that I can read the conversation. **(User Story#16) (should have)**
+
+##### Comments Section for unauthorised Users
+![comment-view-unauthorised-user](documentation/docs_images/comments-section-unauthorised.png)
+
+##### Comments Section for unauthorised Users
+![comment-view-authorised-user](documentation/docs_images/comments-section-authorised.png)
+
+![total-number-of-comments-view](documentation/docs_images/total-comments-view.png)
+
+- This feature allows user to comment on recipes posted by others.
+- If the user is not logged-in, user will only be displayed with the comments made by others on the recipes and a message to login to comment and like the recipe with sign-in link. When user is logged-in with the link, he is taken back to same recipe to add comment. 
+- Authorised users are displayed with the comment box to comment on the recipe, upon comment submission a success message is displayed with a comment awaiting approval information.
+- The comments from other users on the recipe and total number of comments on the recipe is visible to all users regardless of their login status.
+- If recipe has no comments, then a short messsage 'No comments yet' will be displayed.
+
+
+#### Like / Unlike Recipes
+
+- As a logged-in User, I can like/unlike others' recipes so that I can interact with the content. **(User Story#17) (should have)**
+
+![liked-recipe-view](documentation/docs_images/liked-recipe-view.png)
+![unliked-recipe-view](documentation/docs_images/unliked-recipe-view.png)
+
+- The like / unlike feature allows logged-in user to like or unlike the recipes.
+- If unauthorised user clicks the hollow heart icon, no action / effect will be seen on the icon. A simple message is diplayed for user below the recipe details to know that they needs to be logged-in to comment or like the recipe.
+- Authorised user - likes the recipes (if didn't previously liked the recipe), hollow heart icon will be displayed - if clicked the icon will change to solid red color and the number of likes will increase by one.
+- Authorised user - unlikes the recipe (if previously liked the recipe) , the solid red heart icon will be shown - if clicked the icon will chnage to hollow ones and the number of likes will be decreased by one.
+
+
+#### Admin Functionality
+
+- As a developer, I need to create a superuser so that I can manage the website efficiently and ensure the quality and organization of content on the website. **(User Story#24) (must have)**
+- As a Site Admin I can create, read, update and delete recipe posts so that I can manage my recipe blog content. **(User Story#25) (must have)**
+- As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments. **(User Story#26) (must have)**
+
+![admin-functionality-view](documentation/docs_images/admin-functions-view.png)
+
+- The most important task for website to function was to create a superuser, to manage the recipe post functionality and the website entirely.
+- The admin can ensure the quality and organization of the content on the webite.
+- When the comment is made by any user on the recipe, the comment awaiting approval message is displayed to user. The comment is only displayed if it approved by admin.
+- The admin panel helps the administrator to have control over the website to function seamlessely and keep the website content meaningful and organized.
+
+
+#### Feedback on user actions
+
+- As a Site User, I can get corresponding feedback after taking an action so that I know whether my actions were successfully run or not. **(User Story#18) (must have)**
+
+![user-signin-success-message](documentation/docs_images/user-signin-message.png)
+
+![user-signout-success-message](documentation/docs_images/user-signout-message.png)
+
+- This feature informs the user if the action taken has been successful so that user can know the outcome of every action throughout while navigating the website.
+- Message will be displayed when :
+    - User Sign In / Sign Up / Logout
+    - User posted a recipe
+    - User edited the recipe
+    - User deleted the recipe
+    - User comments on a recipe
 
 
 #### Initial Project Setup / Project Documentation / Final Project Deployment
