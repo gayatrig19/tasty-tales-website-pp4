@@ -245,8 +245,10 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 - As a developer, I need to create a home page so that the user can quickly understand what the recipe blog offers and navigate easily to find interesting recipes. **(User Story#21) (must have)**
 
+##### Home Page for all users
 ![home-page-view-unauthorised-users](documentation/docs_images/home-page-view-unauthorised.png)
 
+##### Home Page for authorised users
 ![home-page-view-authorised-users](documentation/docs_images/home-page-view-authorised.png)
 
 - The home page is designed such that it is inviting and conveys the user a clear message about the website and what the user can expect throughout the site journey. The background image showcases the essence of the recipe website. User is encouraged to sign up and explore through a quick, simple introduction about the recipe application.
@@ -280,6 +282,90 @@ Each Milestone covers the user stories for small features allowing me to priorit
 - User can easily access the sign-up / sign-in options to explore the website features completely.
 - A clear message is displayed on the pages for user to know whether he needs to sign-in or sign-up to explore the recipe website and to like, comment and post the recipes.
 - A success message is displayed to user based on his actions for sign-in, sign-up and sign-out.
+
+
+#### Add Recipe Page
+
+- As a logged-in User, I can create/publish recipes so that I can share recipes that I find delicious with others. **(User Story#8) (must have)**
+
+![add-recipe-page-view](documentation/docs_images/add-recipe-page-view.png)
+
+- CRUD Functionality - The Add Recipe page link is only visible and accessible to logged-in users. On clicking the Add Recipe link, authorised users are directed to the create recipe form. The form field marked as * are mandatory to be filled. If user tries to submit the form without entering all required field, messages are displayed below relevant fields that are left empty.
+- A default image is incorporated so that if the user is unable to provide any recipe image, the default image will act as one.
+- All the fields in the form except the Recipe Image field are required. The form is not deemed to be valid in case any of the fields are left empty. User can either publish or save recipe as draft. 
+- Users can share their recipes with others using the add recipe form. On submitting the recipe, user is displayed with a success message and directed to the Recipes page.
+
+#### Edit Recipe
+- As a logged-in User, I can edit the recipes that I have shared so that I can correct and update the recipe details if necessary. **(User Story#9) (must have)**
+
+![edit-recipe-button](documentation/docs_images/edit-button-view.png)
+
+![edit-recipe-page-view](documentation/docs_images/edit-recipe-page-view.png)
+
+- CRUD Functionality - the feature of edit in recipe details page is only visible and accessible to the logged-in users and only if the user is the author of the recipe.
+- On clicking the edit button user is directed to the Edit recipe form/page where user can update / edit recipe for any changes and can either save as draft or publish it. On successful update of the recipe, user is displayed with success message and directed to Recipes Page.
+- If anauthorised user accesses the link the 403 error page will be displayed.
+
+
+#### Delete Recipe
+
+- As a logged-in User, I can delete my recipes so that they are no longer published on the site. **(User Story#10) (must have)**
+
+![delete-button-view](documentation/docs_images/delete-button-view.png)
+
+![delete-recipe-page-view](documentation/docs_images/delete-recipe-page-view.png)
+
+
+- CRUD Functionality - the feature of delete in recipe details page is only visible and accessible to the logged-in users and only if the user is the author of the recipe.
+- User is directed to confirm delete page where user can either delete the recipe or cancel. 
+- The recipe is permanently deleted if delete is confirmed and a success message is diplayed to user else user will be taken back to recipe details page if cancelled.
+- If anauthorised user accesses the link the 403 error page will be displayed.
+
+
+#### Recipe Details
+
+
+#### Recipe Pagination (Recipes Page)
+
+
+#### My Drafts Page
+
+
+
+#### Search Recipes Page
+
+
+
+
+
+#### Initial Project Setup / Project Documentation / Final Project Deployment
+All the user stories are completed for project setup, project documentation and final project deployment
+
+- As a developer, I need to set up the recipe blog project with all the necessary components and 
+  configurations so that I can ensure a smooth development and deployment process. **(User Story#1) (must have)**
+    - Initialize and setup a GitHub repository with a README file using CI Gitpod template.
+    - Install the latest version of Django.
+    - Create a new Django project.
+    - Add main app.
+    - Verify that the project runs without errors using the Django development server.
+    - Add a requirements.txt file listing all project dependencies.
+    - Add env.py file to store sensitive information.
+    - Add Procfile
+    - Implement a proper media storage configuration for user-uploaded images.
+            - image database: Cloudinary
+    - Configure the project to use a ElephantSQL database.
+    - Update the settings.py file to notify Django of the installed supporting libraries .
+    - Deploy project to Heroku to test deployment is successful.
+
+- As a developer, I need to create a base.html file so that I can have a basic structure of the page for the project. **(User Story#2) (must have)**
+- As a developer, I need to add static files and media so that I can build the website to be user friendly, interesting and responsive to all screen sizes. **(User Story#3) (must have)**
+- As a developer, I need to create readme.md file so that the project is documented in detail. **(User Story#19) (must have)**
+- As a developer, I need to make sure the project is deployed to heroku so that everything works and looks as expected. **(User Story#20) (must have)**
+
+
+    
+
+
 
 
 
