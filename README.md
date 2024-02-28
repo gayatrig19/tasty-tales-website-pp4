@@ -494,15 +494,6 @@ All the user stories are completed for project setup, project documentation and 
 - As a developer, I need to make sure the project is deployed to heroku so that everything works and looks as expected. **(User Story#20) (must have)**
 
 
-    
-
-
-
-
-
-
-
-
 ### Features left to implement
 
 
@@ -811,6 +802,13 @@ Couple of warnings when running settings.py file. Too long lines of code. Modify
 
 
 ## Manual Testing
+
+### Functional Testing
+
+
+|  FUNCTION   |   ACTION    |    EXPECTED    |  ACTUAL  |
+|-------------|-------------|----------------|----------|
+| sign-up   | user clicks- 'sign-up' or 'sign up now', user enters username, password and repeats password,(email optional) user clicks- 'sign-up>>' | user directed to home page, user receives a message of successfully signed up as 'USERNAME' |  as expected  |
 
 
 
