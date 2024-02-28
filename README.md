@@ -433,9 +433,9 @@ The website uses clean, simple design with earthy colours and images that showca
 
 
 
-### Validator Testing
+## Validator Testing
 
-#### HTML Validation
+### HTML Validation
 
 All pages have been run through the [W3C VALIDATOR](https://validator.w3.org/).
 
@@ -481,7 +481,7 @@ All errors listed by W3Validator are related to Summernote, and not any code wri
 
   <summary>Click here to see the errors.</summary>
     
-  ![add-recipe-html-validation-error](documentation/docs_images/add-recipe-page-error-html-validation.png)
+![add-recipe-html-validation-error](documentation/docs_images/add-recipe-page-error-html-validation.png)
 
   </details>
 
@@ -493,6 +493,28 @@ All errors listed by W3Validator are related to Summernote, and not any code wri
 
   <summary>Click here to see the errors.</summary>
     
-  ![signup-html-validation-error](documentation/docs_images/sign-up-form-error-html-validation.png)
+![signup-html-validation-error](documentation/docs_images/sign-up-form-error-html-validation.png)
 
   </details>
+
+
+### CSS Validation
+No errors were found when passing through the official Jigsaw W3 Validator
+
+![css-validation-check](documentation/docs_images/css-page-validation.png)
+
+
+### JavaScript Validation
+No errors were found when passing through the [jshint validator](https://jshint.com/)
+
+![javascript-validation-check](documentation/docs_images/javascript-code-jshint-validation.png)
+
+
+### Python Validation
+No errors were found when passing each file through [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+![python-validation-check](documentation/docs_images/python-ci-linter-validation.png)
+
+Couple of warnings when running settings.py file. Too long lines of code. Modifying the file for resolving the warnings rendered errors during deployment. I have left the mentioned lines in settings.py file unchanged for warnings. All other python files have passed the validation with no errors.
+
+![settings-python-validate-warnings](documentation/docs_images/settings-python-validation-warnings.png)
