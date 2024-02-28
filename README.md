@@ -374,3 +374,76 @@ The website uses clean, simple design with earthy colours and images that showca
 
 - The images in this project are sourced from [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/) and [Pixabay](https://pixabay.com/). They were specifically selected to correlate with the main purpose of the website and to give user a imagery representation for the recipe content to increase impact of the design.
 
+
+## Technologies
+
+### Tools and Technologies
+
+
+
+### Imports
+
+#### Python Packages
+
+
+
+#### External Packages
+
+
+## Testing 
+
+### Responsiveness
+
+- The site is designed to be flexible, fluid and responsive on all screen sizes. Website has been checked for responsiveness through Chrome Development tools. In order to do this, the following steps have been taken:
+  1. Open the browser.
+  2. Navigate to the Tasty Tales website <https://tasty-tales-4b4d80fd4040.herokuapp.com/>
+  3. Right click anywhere on the page and got to "Inspect" to open Development Tools.
+  4. Click on drop down menu: "Dimensions: Responsive" and choose "Responsive".
+  5. Drag the side of the screen and change screen size, making sure the website looks good from 320px and up. Here, ensure there is consistency in design of the website on every screen size from small(mobile devices) to larger(desktop devices) and no scorll bar is showing for layout of site.
+
+- Expected Result: Each page is responsive and user friendly when viewing the website on small and large screens.The pages have no design or accessibility issue in any of the screen sizes from 320px and up.
+- Actual Result: Website is responsive with no scroll bar showing, the content is accessible to user to read and the images are not appearing stretched. Website is user friendly on small to large screen sizes.
+
+- The following devices are used to check responsiveness:
+     - Iphone 12 Pro
+     - Samsung Galaxy S20 Ultra
+     - iPad Mini
+     - Surface Pro 7
+- The website was also tested further by sharing the live link with friends and family. The site was tested on following devices:
+     - Samsung S20 FE 5G
+     - Iphone 12 
+     - iPad Air
+     - Samsung S24 Ultra
+     - Microsoft Surface
+     - Asus X5 50
+     - Lenovo Pad Pro 12.7
+
+- The following browsers have been used to check responsiveness. Testing for different browsers was carried on using [BrowserStack](https://www.browserstack.com/) and manually on some of the browsers.
+     - Chrome
+     - Safari
+     - Microsoft Edge
+     - Firefox
+     - Internet Explorer
+
+
+### Accessibility
+
+
+### Lighthouse
+
+
+
+### Validator Testing
+
+#### HTML Validation
+
+All pages have been run through the [W3C VALIDATOR](https://validator.w3.org/).
+
+In order to check HTML code in dynamic website:
+
+- go to the live page
+- click right and select 'Inspect' then click right and select 'View page source'
+- code will open in new tab - copy the code
+- paste the code in the validator as 'direct input'
+
+
