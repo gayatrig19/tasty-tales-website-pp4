@@ -212,6 +212,77 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 ### Existing Features
 
+#### Navigation Menu
+
+- As a developer, I need to create a navigation menu so that a website user can easily navigate through the site pages and content. **(User Story#4) (must have)**
+- As a User, I can navigate between pages easily, so that I can explore the website content without any chaos. **(User Story#22) (should have)**
+
+##### Navigation bar for all users (desktop/mobile)
+![navigation-bar-view-desktop](documentation/docs_images/nav-bar-unauthorised-desktop.png)
+
+![navigation-bar-view-mobile](documentation/docs_images/nav-bar-unauthorised-mobile.png)
+
+##### Navigation bar for only authorised users (desktop/mobile)
+![navigation-bar-view-authorised-desktop](documentation/docs_images/nav-bar-authorised-desktop.png)
+
+![navigation-bar-view-authorised-mobile](documentation/docs_images/nav-bar-authorised-mobile.png)
+
+- The navigation bar is shown on all pages based on the users logged-in(authentication) status and is responsive to all screen sizes. For smaller screen sizes the navigation bar appears as a hamburger menu and can be easily accessed. A success message is displayed when user is logged-in/ registered.
+- The design is kept clean and simple so that user can navigate between the pages easily without any confusion. The links are visible clearly both on large screen and smaller screen sizes. 
+- The active link is marked for ease of accessibility so that the user knows the current page been visited.
+- The navigation menu includes:
+    - Home Page - for all users
+    - Recipes Page - for all users
+    - Search Recipes Page - for all users
+    - Sign up Page - for unauthorised user's registration
+    - Sign in Page - for users already registered
+    - Logout Page - for authorised users
+    - Add Recipe Page - for authorised users
+    - My Drafts Page - for authorised users
+  
+
+#### Home Page
+
+- As a developer, I need to create a home page so that the user can quickly understand what the recipe blog offers and navigate easily to find interesting recipes. **(User Story#21) (must have)**
+
+![home-page-view-unauthorised-users](documentation/docs_images/home-page-view-unauthorised.png)
+
+![home-page-view-authorised-users](documentation/docs_images/home-page-view-authorised.png)
+
+- The home page is designed such that it is inviting and conveys the user a clear message about the website and what the user can expect throughout the site journey. The background image showcases the essence of the recipe website. User is encouraged to sign up and explore through a quick, simple introduction about the recipe application.
+
+
+#### Footer
+
+- As a developer, I need to create a footer so that I can include social media links, contact links and relevant site information about the website. **(User Story#5) (must have)**
+
+![footer-section-view](documentation/docs_images/footer-page-view.png)
+
+- The footer section includes the information about the website: the developer of the website, the purpose (for educational purpose only), year developed and the developer's GitHub and LinkedIn links.
+- Similar to the navigation bar, the footer is displayed on every page of the website. It displays icon links to GitHub and LinkedIn accounts. These icon links can enable user to see more about my work through GitHub and learn more about me through LinkedIn. Both the links opens in new page.
+
+
+#### Sign-Up / Sign-In / Logout Pages
+
+- As a developer, I need to setup allauth so that users can have an option to register and sign-in to the website for exploring more features. **(User Story#6) (must have)**
+
+- As a Site User I can register an account so that I can access publishing, commenting and like/unlike features. **(User Story#7) (must have)**
+
+- As a developer, I want to style the allauth authentication pages(signup, login and logout pages) so that they are visually consistent with the rest of the website and provide a seamless user experience. **(User Story#23) (should have)**
+
+![sign-up-page-view](documentation/docs_images/sign-up-page-view.png)
+
+![sign-in-page-view](documentation/docs_images/sign-in-page-view.png)
+
+![sign-out-page-view](documentation/docs_images/sign-out-page-view.png)
+
+- All the pages are accessible from navigation bar for large and small screen sizes.
+- User can easily access the sign-up / sign-in options to explore the website features completely.
+- A clear message is displayed on the pages for user to know whether he needs to sign-in or sign-up to explore the recipe website and to like, comment and post the recipes.
+- A success message is displayed to user based on his actions for sign-in, sign-up and sign-out.
+
+
+
 
 
 
