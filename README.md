@@ -323,16 +323,60 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 
 #### Recipe Details
+- As a Site User, I can view and read the detailed recipes shared/published by others so that I can get some inspiration. **(User Story#11) (must have)**
+
+##### Recipe Details View for Unauthorised Users
+![recipe-details-page-view](documentation/docs_images/recipe-details-view.png)
+
+##### Recipe Details View for Logged-in Users
+![recipe-details-page-view-authorised-users](documentation/docs_images/recipe-details-recipe-author.png)
+
+##### Recipe Details View for Logged-in User and author of the recipe
+![recipe-details-page-view-recipe-author](documentation/docs_images/recipe-details-view-user.png)
+
+- User can view a detailed recipe on this page along with number of comments, number of likes and the all recipe information.
+- The edit and delete buttons are visible and accessible only to the logged-in user as author of the recipe.
+- Logged-in users can explore the recipe details page completely for like / unlike and comments feature.
+- If user is not logged-in, information is displayed below recipe for sign-in along with the comments from other users in the comment section.
 
 
 #### Recipe Pagination (Recipes Page)
 
+- As a Site User, I can view a paginated list of recipe posts so that I can select which recipes I want to view. **(User Story#12) (should have)**
+
+![recipe-page-list-view](documentation/docs_images/recipe-page-lists-view.png)
+
+![recipe-page-next-button](documentation/docs_images/recipe-pagination-next-page.png)
+
+![recipe-page-prev-button](documentation/docs_images/recipation-pagination-prev-page.png)
+
+- This feature allows recipes to be paginated by 6 recipes per page, given more than 2 pages the next and prev buttons appear adjacent to each other.
+- The recipe list page is kept simple so that it is not overcrowded and user can find it easy to navigate between the pages.
+- On clicking the View Recipe button user is taken to recipe details page to view complete recipe information.
+
 
 #### My Drafts Page
 
+- As a logged-in User, I can go to a page to view only my recipes so that I can easily access them if needed.
+**(User Story#13) (should have)**
+
+- **Note:** The user story is partially complete. User can only view the recipes saved as draft in my drafts page for now. User can update the draft recipe from my drafts page to either publish or save it for later. 
+- This page is only accessible and visible to logged-in users.
+- The paginated list of recipe drafts is displayed with 6 recipes per page (if present). With this feature user can create recipe and save for later as draft for changes or to publish later.
+- User can also make his published recipes draft for any changes. This feature allows a flexibility for user to share recipes and manage them.
+
+![my-drafts-recipe-view](documentation/docs_images/my-drafts-page-view.png)
 
 
 #### Search Recipes Page
+
+- As a Site User, I can search recipes so that I can only view recipes I am interested in. **(User Story#14) (could have)**
+
+![search-recipes-page-view](documentation/docs_images/search-recipes-page-view.png)
+
+![search-results-page-view](documentation/docs_images/search-results-page-view.png)
+
+![search-not-found-page-view](documentation/docs_images/search-not-found-page-view.png)
 
 
 
