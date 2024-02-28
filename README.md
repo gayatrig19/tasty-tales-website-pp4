@@ -227,6 +227,8 @@ Each Milestone covers the user stories for small features allowing me to priorit
 #### Desktop Wireframes
 Wireframes for Large Screen Sizes 
 
+Update: The Search Recipes Button is changed later in design, it is included along with the other navbar menus and is accessible to all users. It is just kept as a nav link instead of button for both desktop and mobile devices.
+
 #### Home Page (authorised / unauthorised users)
      
 ![home-page-authorised-users-desktop-wireframe](documentation/docs_images/home-page-authorised-users-wireframe-desktop.png)
@@ -518,3 +520,17 @@ No errors were found when passing each file through [CI Python Linter](https://p
 Couple of warnings when running settings.py file. Too long lines of code. Modifying the file for resolving the warnings rendered errors during deployment. I have left the mentioned lines in settings.py file unchanged for warnings. All other python files have passed the validation with no errors.
 
 ![settings-python-validate-warnings](documentation/docs_images/settings-python-validation-warnings.png)
+
+
+## Manual Testing
+
+
+
+
+
+
+## Automated Testing
+
+### Unit Testing
+
+No unit testing performed at this stage.
