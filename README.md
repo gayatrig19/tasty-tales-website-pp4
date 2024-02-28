@@ -448,6 +448,27 @@ Each Milestone covers the user stories for small features allowing me to priorit
     - User comments on a recipe
 
 
+#### Error Pages
+
+- As a User, I want to be directed to a 403 error page when attempting to access content or functionality that I am not authorized to view, so that I am aware of my access limitations and can take appropriate action.
+**(User Story#27) (must have)**
+
+- As a User, I want to be directed to a custom 404 page when I navigate to a broken link or URL that does not exist, so that I am informed that the page I am looking for is not available and can be directed to other relevant sections of the website. **(User Story#28) (should have)**
+
+- As a user, I am notified in case of an internal error so that I can understand what went wrong and how to proceed. **(User Story#29) (nice to have)**
+
+
+![error-403-page](documentation/docs_images/error-403-page.png)
+
+![error-404-page](documentation/docs_images/error-404-page.png)
+
+![error-500-page](documentation/docs_images/error-500-page.png)
+
+- The custom error pages are displayed if user encounters an error while accessing unauthorised link(access denied), user navigates to a page not present(page not found), or if there is internal error while rendering the user requested resource.
+- This feature communicates to the user about what went wrong and gives option to go back to the home page. This gives user an option to navigate the website again without leaving it.
+- The message displayed for each of the error is user-friendly and gives user an easy to access option to go back to home page through providing the home page link.
+
+
 #### Initial Project Setup / Project Documentation / Final Project Deployment
 All the user stories are completed for project setup, project documentation and final project deployment
 
