@@ -378,7 +378,7 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 ![search-not-found-page-view](documentation/docs_images/search-not-found-page-view.png)
 
-
+- The search recipes page allows users to search recipes by title, keyword and cuisines. This page is accessible throughout the website and to all users.
 
 
 
