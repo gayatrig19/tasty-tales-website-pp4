@@ -446,4 +446,53 @@ In order to check HTML code in dynamic website:
 - code will open in new tab - copy the code
 - paste the code in the validator as 'direct input'
 
+#### Home Page
+![home-page-html-validation](documentation/docs_images/home-page-html-validation.png)
 
+#### Recipes Page
+![recipes-page-html-validation](documentation/docs_images/recipes-page-html-validation.png)
+
+#### Recipe Details Page
+![recipes-details-page-html-validation](documentation/docs_images/recipe-detail-page-html-validation.png)
+
+#### Search Recipes Page
+![search-recipes-page-html-validation](documentation/docs_images/search-recipe-page-html-validation.png)
+
+#### My Drafts Page
+![my-drafts-page-html-validation](documentation/docs_images/my-drafts-page-html-validation.png)
+
+#### Sign In Page
+![sign-in-page-html-validation](documentation/docs_images/sign-in-page-html-validation.png)
+
+
+#### Logout Page
+![logout-page-html-validation](documentation/docs_images/logout-page-html-validation.png)
+
+#### Error Pages (403, 500, 404)
+![error-page-html-validation](documentation/docs_images/error-pages-html-validation.png)
+
+#### Delete Recipe Page
+![delete-recipe-page-html-validation](documentation/docs_images/delete-recipe-page-html-validation.png)
+
+#### Add Recipe Page | Update Recipe Page
+All errors listed by W3Validator are related to Summernote, and not any code written by me. Errors are the same for both "Add Recipe" page and "Update Recipe" page. Research conducted within the Code Institute community indicates that this is a common occurrence, and therefore it should be noted. However, no action needs to be taken in response.
+
+<details>
+
+  <summary>Click here to see the errors.</summary>
+    
+  ![add-recipe-html-validation-error](documentation/docs_images/add-recipe-page-error-html-validation.png)
+
+  </details>
+
+#### Sign Up Page
+ The Sign Up page HTML code is part of the Django authentication form, and I could find no way to change it. 
+ The html errors are coming from Django forms interpretation of allauths helper text, and not any code written by me. So, no action is taken in response.
+
+ <details>
+
+  <summary>Click here to see the errors.</summary>
+    
+  ![signup-html-validation-error](documentation/docs_images/sign-up-form-error-html-validation.png)
+
+  </details>
