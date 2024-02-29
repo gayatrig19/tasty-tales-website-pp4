@@ -689,14 +689,39 @@ The website uses clean, simple design with earthy colours and images that showca
 - BrowserStack for cross-browser testing.
 
 
-
 ### Imports
 
 #### Python Packages
-
+- Summernote - used to provide an editor for user and admin for adding recipes instructions and ingredients.
+- TemplateView, CreateView, ListView, DeleteView, UpdateView - used to allow CRUD functionality
+- LoginRequiredMixin, UserPassesTestMixin - used to test and secure views from unauthorised access.
+- messages - used to add action messages to user on submission
+- HttpResponseRedirect, reverse : used to direct user to specific URL
+- get_object_or_404: used to get specific object from database or raise 404 exception if not found
 
 
 #### External Packages
+
+- cloudinary==1.36.0 - media management cloudinary
+- dj3-cloudinary-storage==0.0.6 - cloudinary storage
+- dj-database-url==0.5.0 - Django utility allows tp utilize DATABASE_URL environment variable to configure 
+  Django application
+- Django==4.2.9 - Framework used to build the project
+- django-allauth==0.57.0 - authentication in django allows users to sign-in / signup / logout
+- requests-oauthlib==1.3.1 -installed with the allauth
+- psycopg2==2.9.9 - additional dependency needed to support PostgreSQL when deployed on heroku
+- django-crispy-forms==2.1 - used to display forms to user
+- django-summernote==0.8.20.0 - used to provide editor in forms
+
+Installed as dependencies with other packages:
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- PyJWT==2.8.0
+- python3-openid==3.2.0
+- sqlparse==0.4.4
+- urllib3==1.26.18
+
+
 
 
 ## Testing 
