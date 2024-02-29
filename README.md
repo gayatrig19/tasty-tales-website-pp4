@@ -826,6 +826,27 @@ Couple of warnings when running settings.py file. Too long lines of code. Modify
 | Add Your Recipe link(Search Recipes Page) | user clicks on add your recipe link regardless of auth status | 1. logged-in user directed to add_recipe.html page where they can see form to add recipe. 2. unauthorised users are directed to sign-in page and can sign up if not. | as expected  |
 
 
+### Links and Buttons
+
+| Button / Anchor Link / Location | Destination Page | Page Opens In New Tab |
+|---------------------------------|------------------|-----------------------|
+|TastyTales logo - nav bar	      | index.html	      | no - as expected       |
+| Home tab - nav bar	              |  index.html	      |  no - as expected      |
+| Recipes tab - nav bar	          |   recipes.html	   | no - as expected      |
+|Search Recipes tab - nav bar      |   recipe_search.html | no - as expected    |
+| Add Recipe tab - nav bar (for logged-in users only) | add_recipe.html | no - as expected    |
+| My Drafts tab - nav bar (for logged-in users only) |  my_drafts.html | no - as expected    | 
+|Logout - nav bar(for logged-in users only) | logout.html |	no-as expected  |
+| SignUp Now- from index.html(unauthorised users only) | signup.html |	no - as expected |
+| Sign Up - nav bar (unauthorised users only) |	signup.html	 |  no - as expected  |
+| Sign In - nav bar (unauthorised users only) |	login.html |	no - as expected |
+| Sign in - comments section, recipe_detail.html(unauthorised users only) |	login.html| no - as expected |
+|Edit - recipe_detail.html(on users own recipes only) | update_recipe.html | no - as expected |
+| Delete - recipe_detail.html(on users own recipes only) |	recipe_confirm_delete.html |	no - as expected |
+| All recipes - from recipe_search.html (for all users) | recipes.html | no - as expected |
+| Add Your Recipe - from recipe_search.html (1. for unauthorised users. 2. for authorised users) | 1.login.html. 2.add_recipe.html | no - as expected |
+|"GitHub" Icon - footer | <https://github.com/gayatrig19> | yes - as expected |
+|"LinkedIn" Icon - footer | <https://www.linkedin.com/in/gayatri-ghogare-a8099692/> | yes - as expected |
 
 
 
