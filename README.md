@@ -659,6 +659,34 @@ The website uses clean, simple design with earthy colours and images that showca
 ## Technologies
 
 ### Tools and Technologies
+ 
+- Gitpod - used to develop the website
+- [GitHub](https://github.com/) to host the source code. 
+- Git to provide the version control to commit and push code to the repository.
+- HTML - used to create main static content of the website
+- Bootstrap - front end framework used
+- CSS- used for website styling
+- JavaScript- used to create dynamic content and make page interactive
+- Python - used as the main language to code the logic of the page
+- Django - framework used
+- Heroku - to deploy the app
+- [Google Fonts](https://fonts.google.com/) for typography.
+- [FontAwesome](https://fontawesome.com/v5/search) v5.15.4 for website icons.
+- [Favicon.io](https://favicon.io/) to create the website favicon.
+- [Cloudconvert](https://cloudconvert.com/jpg-to-webp) to convert .jpg images into .webp to reduce storage 
+    and enhance the website performance.
+- [TinyJPG](https://tinyjpg.com/) to optimise images for website.
+- Balsamiq to design the wireframes for the website.
+- Google Chrome's Lighthouse to test accessibility for desktop and mobile devices.
+- [WAVE](https://wave.webaim.org/) evaluation tool to test the website for accessibility to individuals with 
+  disabilities.
+- [W3C HTML Markup Validator](https://validator.w3.org/) to validate the HTML Code.
+- [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate the CSS Code.
+- [jshint validator](https://jshint.com/) - used to check java script code for errors.
+- [SmartDraw](https://www.smartdraw.com/) used to generate the ER Diagram
+- [Am I Responsive](http://amiresponsive.blogspot.com/) to create the Mockup image in this README.
+- Code Institute's Gitpod Template to generate the workspace for the project.
+- BrowserStack for cross-browser testing.
 
 
 
@@ -709,9 +737,228 @@ The website uses clean, simple design with earthy colours and images that showca
 
 ### Accessibility
 
+- Each page is checked with the help of WAVE Accessibility tool (<https://wave.webaim.org/>)
+- Each page passes accessibility test with no error for:
+  - contrast
+  - aria- labels for users who use screen-readers.
+  - alternative text as a function for screen readers or in events if the images don't load.
+  - structural elements: for users of assistive technology as well as visual and semantic meaning.
+  - language of the document for screen readers.
+  - an alert coming up 'Reduntant link-Adjacent links go to the same URL', however as it doesn't come up as an error, I have left it in' This is due to page logo and Home page having the same destination link.
+  - an alert is coming up 'same alternative text to nearby images' in recipes list view, as the alt is given default in the code, the user uploaded images appear with same alternative text, the solution for this can be adding an image alt field to model, so that the alternative text for image is added by user. I have left it in for later.
+  - for errors see the [Bugs](#bugs) section.
+
+- Accessibility test result for [website](documentation/docs_images/accessibility-test-home-page.png)
 
 ### Lighthouse
 
+### Home Page (Desktop / Mobile)
+
+<details>
+
+  <summary>Home Page - Desktop</summary>
+    
+![home-page-lighthouse-desktop](documentation/docs_images/home-page-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary>Home Page - Mobile</summary>
+    
+![home-page-lighthouse-mobile](documentation/docs_images/home-page-lighthouse-mobile.png)
+
+  </details>
+
+
+### Recipes Page (Desktop / Mobile)
+
+<details>
+
+  <summary>Recipes Page - Desktop</summary>
+    
+![recipes-page-lighthouse-desktop](documentation/docs_images/recipes-page-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary>Recipes Page - Mobile</summary>
+    
+![recipes-page-lighthouse-mobile](documentation/docs_images/recipes-page-lighthouse-mobile.png)
+
+  </details>
+
+
+### Recipes Details Page (Desktop / Mobile)
+
+<details>
+
+  <summary>Recipe Details Page - Desktop</summary>
+    
+![recipe-details-page-lighthouse-desktop](documentation/docs_images/recipe-details-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary>Recipe Details Page - Mobile</summary>
+    
+![recipe-details-page-lighthouse-mobile](documentation/docs_images/recipe-details-lighthouse-mobile.png)
+
+  </details>
+
+
+### Search Recipes Page (Desktop / Mobile)
+
+<details>
+
+  <summary>Search Recipes Page - Desktop</summary>
+    
+![search-recipes-page-lighthouse-desktop](documentation/docs_images/search-recipes-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary>Search Recipes Page - Mobile</summary>
+    
+![search-recipes-page-lighthouse-mobile](documentation/docs_images/search-recipes-lighthouse-mobile.png)
+
+  </details>
+
+
+### Sign Up Page (Desktop / Mobile)
+
+<details>
+
+  <summary> Sign Up Page - Desktop</summary>
+    
+![sign-up-page-lighthouse-desktop](documentation/docs_images/sign-up-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary> Sign Up Page - Mobile</summary>
+    
+![sign-up-page-lighthouse-mobile](documentation/docs_images/sign-up-page-lighthouse-mobile.png)
+
+  </details>
+
+
+### Sign In Page (Desktop / Mobile)
+
+<details>
+
+  <summary> Sign In Page - Desktop</summary>
+    
+![sign-in-page-lighthouse-desktop](documentation/docs_images/sign-in-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary> Sign In Page - Mobile</summary>
+    
+![sign-in-page-lighthouse-mobile](documentation/docs_images/sign-in-page-lighthouse-mobile.png)
+
+  </details>
+
+
+### Log Out Page (Desktop / Mobile)
+
+<details>
+
+  <summary> Log Out Page - Desktop</summary>
+    
+![log-out-page-lighthouse-desktop](documentation/docs_images/sign-out-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary> Log Out Page - Mobile</summary>
+    
+![Log-out-page-lighthouse-mobile](documentation/docs_images/sign-out-lighthouse-mobile.png)
+
+  </details>
+
+
+### Add Recipe Page (Desktop / Mobile)
+
+<details>
+
+  <summary> Add Recipe Page - Desktop</summary>
+    
+![add-recipe-page-lighthouse-desktop](documentation/docs_images/add-recipe-page-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary> Add Recipe Page - Mobile</summary>
+    
+![add-recipe-page-lighthouse-mobile](documentation/docs_images/add-recipe-page-lighthouse-mobile.png)
+
+  </details>
+
+### Edit Recipe Page
+
+<details>
+
+  <summary> Edit Recipe Page</summary>
+    
+![edit-recipe-page-lighthouse-desktop](documentation/docs_images/edit-recipe-page-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary>Why is Accessibility not 100?</summary>
+The element is provided by Summernote, and it is not something I can change.
+
+![edit-recipe-accessibility-lighthouse-desktop](documentation/docs_images/edit-form-accessibility-lighthouse-desktop.png)
+
+  </details>
+
+
+### Delete Recipe Page (Desktop / Mobile)
+
+<details>
+
+  <summary> Delete Recipe Page - Desktop</summary>
+    
+![delete-recipe-page-lighthouse-desktop](documentation/docs_images/delete-page-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary> Delete Recipe Page - Mobile</summary>
+    
+![delete-recipe-page-lighthouse-mobile](documentation/docs_images/delete-recipes-lighthouse-mobile.png)
+
+  </details>
+
+
+### My Drafts Page (Desktop / Mobile)
+
+<details>
+
+  <summary> My Drafts Page - Desktop</summary>
+    
+![my-drafts-page-lighthouse-desktop](documentation/docs_images/my-drafts-page-lighthouse-desktop.png)
+
+  </details>
+
+<details>
+
+  <summary> My Drafts Page - Mobile</summary>
+    
+![my-drafts-page-lighthouse-mobile](documentation/docs_images/my-drafts-page-lighthouse-mobile.png)
+
+  </details>
 
 
 ## Validator Testing
