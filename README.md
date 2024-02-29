@@ -806,7 +806,7 @@ Couple of warnings when running settings.py file. Too long lines of code. Modify
 ### Functional Testing
 
 
-|  FUNCTION   |   ACTION    |    EXPECTED    |  ACTUAL  |
+|  Function   |   Action   |    Expected    |  Actual  |
 |-------------|-------------|----------------|----------|
 | sign-up   | user clicks- 'sign-up' or 'sign up now', user enters username, password and repeats password,(email optional) user clicks- 'sign-up>>' | user directed to home page, user receives a message of Successfully Signed up as 'USERNAME' at the top of the page |  as expected  |
 | sign-in   | user clicks- 'sign-in' from nav bar or from sign-up page if entered it but already holds login details, user enters correct username and password, user clicks- 'sign-in' | user directed to home page, user receives a message of Successfully Signed in as 'Username' at the top of the page | as expected  |
@@ -849,6 +849,18 @@ Couple of warnings when running settings.py file. Too long lines of code. Modify
 |"LinkedIn" Icon - footer | <https://www.linkedin.com/in/gayatri-ghogare-a8099692/> | yes - as expected |
 
 
+### Negative Testing
+
+Testing is performed on all forms in the website and for user authentication to Create, Update, Delete recipes.
+
+|  Function  |   Action    |    Expected    |  Actual  |
+|------------|--------------|---------------|-----------|
+|Sign Up   |	user doesn't fill in all required fields (username and password twice), user enters password twice but doesn't match, username enters too common password or less than 8 characters |	user received a prompt with directions, submission unsuccessful user can enter details again | as expected |
+|Sign-in |	user doesn't fill in all required fields (username and password). user enters incorrect username or password | user receives prompt why sign-in is unsuccessful and can enter details again |	as expected |
+| Add Recipe form | user doesn't fill in all required fields(marked with *) | user receives a prompt to fill in the required field. form doesn't submit. user can enter details again | as expected |
+|Edit Recipe |	1.user tries to access URL to edit recipe but not logged in 2. user tries to access the url from different username	| 1.user directed to login page 2. user receives error 403 |	as expected |
+| Delete Recipe |	1.user tries to access URL to delete recipe but not logged in 2. user tries to access the url from different username | 1.user directed to login page 2. user receives error 403 | as expected |
+| Comment form |	user tries to submit empty comment form |	user receives prompt Please fill in this field, form is not submitted |	as expected |
 
 ## Automated Testing
 
