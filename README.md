@@ -57,7 +57,7 @@ Tasty Tales is a full stack web application that gives user a platform to view a
  - [Bugs](#bugs)
  - [Deployment](#deployment)
    - [Version Control](#version-control)
-   - [Deployment Using Heroku](#deployment-using-heroku)
+   - [Deployment In Heroku](#deployment-in-heroku)
    - [Cloning the Repository](#cloning-the-repository)
    - [Forking](#forking)
  - [Credits](#credits)
@@ -867,3 +867,72 @@ Testing is performed on all forms in the website and for user authentication to 
 ### Unit Testing
 
 No unit testing performed at this stage.
+
+
+## Bugs
+
+
+
+## Deployment
+
+### Version Control
+
+- The website was developed through Gitpod.
+
+- Code has been pushed to repository on Github with following git commands:
+
+    - git add . - to add files ready to commit
+    - git commit -m "message" - to commit the code to local repository ready to be pushed
+    - git push - final command used to push committed code to remote repo on Github
+
+### Deployment In Heroku
+
+- The project has been deployed on Heroku as follows:
+     - Use: pip freeze > requirements.txt to add external libraries to deployed app.
+     - Create Heroku account
+     - In the top right, click 'New'
+     - Click 'Create new app'
+     - Give your app a name and select your region from drop down
+     - Click 'Create new app'
+     - Go to 'settings' tab, it's important you do it before deployment
+     - Scroll down to 'config vars' section and key:
+          - PORT and value: 8000
+          - CLOUDINARY_URL: 'API key to your cloudinary account'
+          - DATABASE_URL : 'URL from your database account'
+          - SECRET_KEY: 'Generate your own secret key'
+     - Scroll down to 'Buildpacks' section
+     - Click 'Add buildpack'
+     - Add Python as first dependency and select 'Save changes'
+     - Add node.js as a second dependency and save again (This is settings section done)
+     - Select 'Deploy' tab at the top
+     - Select ' Github' from 'Deployment method'
+     - type the name of how you called project in Github and click 'search'
+     - Scroll down and select manual deployment method
+     - You can also use Auto deployment method to allow the project to update every time you push the code.
+     - You can now click to view the app ready and running
+- For this project I used Manual deployment method to deploy the current state of the branch, every time I pushed the code from Gitpod.
+
+### Cloning the Repository
+1. On Github navigate to the repository
+2. Click "Code" drop down menu - a green button shown right above the file list.
+3. Copy the URL of the repository using "HTTPS", "SSH" or "Github CLI".
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type "git clone", and then paste the URL copied earlier.
+7. Press enter to create local clone. A clone of the repository will now be created.
+
+For more details on how to clone the repository in order to create a copy for own use refer to the site: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
+
+
+### Forking 
+
+1. On Github navigate to the repository.
+2. Click "Fork" located towards top right corner on GitHub page.
+3. Select "owner" for the forked repository from the dropdown menu under "owner".
+4. It will create forked repo under the same name as original by default. But you can type a name in "Repository name" or add a description in "Description" box.
+5. Click on "Create fork". A forked repo is created.
+
+- Forking allows you to make any changes without affecting original project. You can send the the suggestions by submitting a pull request. Then the Project Owner can review the pull request before accepting the suggestions and merging them.
+- When you have fork to a repository, you don't have access to files locally on your device, for getting 
+  access you will need to clone the forked repository.
+- For more details on how to fork the repo, in order to for example suggest any changes to the project you can visit:<https://docs.github.com/en/get-started/quickstart/fork-a-repo>
