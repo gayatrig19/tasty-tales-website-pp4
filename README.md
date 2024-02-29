@@ -62,6 +62,7 @@ Tasty Tales is a full stack web application that gives user a platform to view a
    - [Cloning the Repository](#cloning-the-repository)
    - [Forking](#forking)
  - [Credits](#credits)
+ - [Acknowledgements](#acknowledgements)
 
 
 # User Experience Design
@@ -497,7 +498,11 @@ All the user stories are completed for project setup, project documentation and 
 
 ### Features left to implement
 
-
+- Implement a customizable User profile section where user can add personal information (profile picture / avatar, bio, interests, favourite recipes) and view his published and draft recipes (currently user can view only draft recipes in my drafts page).
+- Add a feature that allows users to click on the author's name and view all the recipes published by that   author.
+- Enhance search functionality to search for recipes based on FuzzySearch.
+- Provide users with social media options to login.
+- Add a subscription feature so that user can get latest recipes through email.
 
 
 ## The Skeleton Plane
@@ -721,8 +726,6 @@ Installed as dependencies with other packages:
 - python3-openid==3.2.0
 - sqlparse==0.4.4
 - urllib3==1.26.18
-
-
 
 
 ## Testing 
@@ -1135,6 +1138,7 @@ Testing is performed on all forms in the website and for user authentication to 
 | Delete Recipe |	1.user tries to access URL to delete recipe but not logged in 2. user tries to access the url from different username | 1.user directed to login page 2. user receives error 403 | as expected |
 | Comment form |	user tries to submit empty comment form |	user receives prompt Please fill in this field, form is not submitted |	as expected |
 
+
 ## Automated Testing
 
 ### Unit Testing
@@ -1143,6 +1147,13 @@ No unit testing performed at this stage.
 
 
 ## Bugs
+
+- Midway during development I modified my recipe model for slug field which resulted in IntegrityError for previously uploaded recipes. On discussion with tutor, the previous migrations were reversed and new migartions were made to resolve the error.
+- Installing both whitenoise and cloudinary resulted in conflict for serving static files and as a result the deployment failed.
+    - Fix: The order of apps in my Installed Apps in settings.py for cloudinary was not correct. The apps are reorder correctly, Whitenoise and related staticfiles folder is removed. Static files are served on Cloudinary.
+
+### Unfixed Bugs 
+
 
 
 
@@ -1209,3 +1220,18 @@ For more details on how to clone the repository in order to create a copy for ow
 - When you have fork to a repository, you don't have access to files locally on your device, for getting 
   access you will need to clone the forked repository.
 - For more details on how to fork the repo, in order to for example suggest any changes to the project you can visit:<https://docs.github.com/en/get-started/quickstart/fork-a-repo>
+
+
+## Credits
+
+
+
+
+
+## Acknowledgements
+
+- I would like to express my gratitude to my mentor, Ronan McClelland, for his unwavering guidance, moral support, encouragement, and invaluable suggestions throughout the project. The project review sessions with my mentor, along with his solutions to my questions and the study materials he provided, were instrumental in the success of this project.
+- I would like to thank my husband, Siddharth Dighe, for his constant support and for reviewing my work actively, getting involved in the discussions for website ideas and design content.
+- I am also deeply thankful to my family and friends for their willingness to test the app and provide 
+valuable feedback.
+- I am grateful to the Code Institute's Tutor support for solving all my doubts.
