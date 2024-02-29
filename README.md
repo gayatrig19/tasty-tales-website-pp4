@@ -297,7 +297,9 @@ Each Milestone covers the user stories for small features allowing me to priorit
 - All the fields in the form except the Recipe Image field are required. The form is not deemed to be valid in case any of the fields are left empty. User can either publish or save recipe as draft. 
 - Users can share their recipes with others using the add recipe form. On submitting the recipe, user is displayed with a success message and directed to the Recipes page.
 
+
 #### Edit Recipe
+
 - As a logged-in User, I can edit the recipes that I have shared so that I can correct and update the recipe details if necessary. **(User Story#9) (must have)**
 
 ![edit-recipe-button](documentation/docs_images/edit-button-view.png)
@@ -325,6 +327,7 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 
 #### Recipe Details
+
 - As a Site User, I can view and read the detailed recipes shared/published by others so that I can get some inspiration. **(User Story#11) (must have)**
 
 ##### Recipe Details View for Unauthorised Users
@@ -472,6 +475,7 @@ Each Milestone covers the user stories for small features allowing me to priorit
 
 
 #### Initial Project Setup / Project Documentation / Final Project Deployment
+
 All the user stories are completed for project setup, project documentation and final project deployment
 
 - As a developer, I need to set up the recipe blog project with all the necessary components and 
@@ -656,7 +660,6 @@ The website uses clean, simple design with earthy colours and images that showca
 
 - [Lato](https://fonts.google.com/specimen/Lato?query=Lato) was chosen for body text as it is light and easy to read.
 
-
 #### Images
 
 - The images in this project are sourced from [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/) and [Pixabay](https://pixabay.com/). They were specifically selected to correlate with the main purpose of the website and to give user a imagery representation for the recipe content to increase impact of the design.
@@ -712,11 +715,11 @@ The website uses clean, simple design with earthy colours and images that showca
 - asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with  each other.
 - cloudinary==1.36.0 - media management cloudinary
 - dj3-cloudinary-storage==0.0.6 - cloudinary storage
-- dj-database-url==0.5.0 - Django utility allows tp utilize DATABASE_URL environment variable to configure 
+- dj-database-url==0.5.0 - Django utility allows to utilize DATABASE_URL environment variable to configure 
   Django application
 - Django==4.2.9 - Framework used to build the project
 - django-allauth==0.57.0 - authentication in django allows users to sign-in / signup / logout
-- requests-oauthlib==1.3.1 -installed with the allauth
+- requests-oauthlib==1.3.1 - installed with the allauth
 - psycopg2==2.9.9 - additional dependency needed to support PostgreSQL when deployed on heroku
 - django-crispy-forms==2.1 - used to display forms to user
 - django-summernote==0.8.20.0 - used to provide editor in forms
@@ -780,6 +783,7 @@ Installed as dependencies with other packages:
   - for errors see the [Bugs](#bugs) section.
 
 - Accessibility test result for [website](documentation/docs_images/accessibility-test-home-page.png)
+
 
 ### Lighthouse
 
@@ -1094,7 +1098,7 @@ Couple of warnings when running settings.py file. Too long lines of code. Modify
 | view recipes (from list view on recipes.html or recipe_search.html)| user hovers over ' view recipe' button, button changes color to dark blue when hovered over, user clicks on the button | recipe_detail.html page rendered for user, user can see correct recipe in detail | as expected  |
 | Like function (from recipe_detail page) | 1. logged-in user clicks on hollow heart icon 2. logged-in user clicks on the solid red heart icon 3. unauthorised user clicks on heart icon | 1. icon changes to solid red color and number of likes increases by one. 2.icon changes to hollow and number of likes decreases by One. 3. the hollow heart icon has no effect | as expected  |
 | login to leave a comment : sign-in (from recipe_detail page) | user clicks on 'sign-in', user enters correct username and password, then clicks ' sign in' | user redirected back to the same recipe detail page, user can see success message at the top of the screen. upon scrolling down to comments section- user can now see submission form to leave a comment instead of sign-in option | as expected  |
-| leave comment form | user enters a comment and clicks submit | users comment now displays in comments section below the comment form. Comments are shown in reverse chronological order with the oldest comments apperaing first | as expected  |
+| leave comment form | user enters a comment and clicks submit | users comment now displays in comments section adjacent to the comment form. Comments are shown in reverse chronological order with the oldest comments apperaing first | as expected  |
 | My Drafts tab | logged in user clicks on My Drafts tab from nav bar | user directed to my_drafts.html, a list of only users own recipes - 'status - draft' available to view. User can see 6 recipes list per page and pagination navigation available below recipe posts if more than 6 recipes are available. If user didn't create any draft recipe yet a message will be displayed conveying user has no draft recipes yet. | as expected  |
 |Add Recipe tab | logged in user clicks on Add Recipe tab from nav bar | user directed to add_recipe.html page where they can see submission form for recipes | as expected  |
 | Add Recipe form | user enters all fields marked as required with an '*', the optional image field can either stay empty or be filled in- user clicks 'submit' | user directed back to recipes.html page, a success message displays on the top of the page, user now can see the added recipe post in list view on recipes page. If user submitted the recipe as draft- the recipe displays only on My Drafts page with status of 'Draft', if recipe was marked as published- it displays as a list view on recipes.html page | as expected  |
@@ -1177,6 +1181,7 @@ No unit testing performed at this stage.
     - git commit -m "message" - to commit the code to local repository ready to be pushed
     - git push - final command used to push committed code to remote repo on Github
 
+
 ### Deployment In Heroku
 
 - The project has been deployed on Heroku as follows:
@@ -1203,6 +1208,7 @@ No unit testing performed at this stage.
      - You can also use Auto deployment method to allow the project to update every time you push the code.
      - You can now click to view the app ready and running
 - For this project I used Manual deployment method to deploy the current state of the branch, every time I pushed the code from Gitpod.
+
 
 ### Cloning the Repository
 1. On Github navigate to the repository
@@ -1243,8 +1249,6 @@ For more details on how to clone the repository in order to create a copy for ow
 - [Blog Tutorial](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) helped me in creating my models and understanding the CRUD functionality.
 - The PositiveInteger validation for cooking time, prep time and servings was referred from this [article.](https://stackoverflow.com/questions/2248617/0-value-in-django-positiveintegerfield)
 - The search functionality in django was studied from this [tutorial](https://learndjango.com/tutorials/django-search-tutorial) and modified according to the project requirements.
-
-
 
 
 ## Acknowledgements
