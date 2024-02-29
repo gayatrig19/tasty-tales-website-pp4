@@ -1202,7 +1202,7 @@ No unit testing performed at this stage.
      - Add Python as first dependency and select 'Save changes'
      - Add node.js as a second dependency and save again (This is settings section done)
      - Select 'Deploy' tab at the top
-     - Select ' Github' from 'Deployment method'
+     - Select 'Github' from 'Deployment method'
      - type the name of how you called project in Github and click 'search'
      - Scroll down and select manual deployment method
      - You can also use Auto deployment method to allow the project to update every time you push the code.
@@ -1211,6 +1211,7 @@ No unit testing performed at this stage.
 
 
 ### Cloning the Repository
+
 1. On Github navigate to the repository
 2. Click "Code" drop down menu - a green button shown right above the file list.
 3. Copy the URL of the repository using "HTTPS", "SSH" or "Github CLI".
