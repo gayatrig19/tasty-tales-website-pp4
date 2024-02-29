@@ -676,6 +676,7 @@ The website uses clean, simple design with earthy colours and images that showca
 - Python - used as the main language to code the logic of the page
 - Django - framework used
 - Heroku - to deploy the app
+- ElephantSQL - A free cloud based PostgreSQL database system used for the application database.
 - [Google Fonts](https://fonts.google.com/) for typography.
 - [FontAwesome](https://fontawesome.com/v5/search) v5.15.4 for website icons.
 - [Favicon.io](https://favicon.io/) to create the website favicon.
@@ -708,6 +709,7 @@ The website uses clean, simple design with earthy colours and images that showca
 
 #### External Packages
 
+- asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with  each other.
 - cloudinary==1.36.0 - media management cloudinary
 - dj3-cloudinary-storage==0.0.6 - cloudinary storage
 - dj-database-url==0.5.0 - Django utility allows tp utilize DATABASE_URL environment variable to configure 
@@ -1153,8 +1155,9 @@ No unit testing performed at this stage.
     - Fix: The order of apps in my Installed Apps in settings.py for cloudinary was not correct. The apps are reorder correctly, Whitenoise and related staticfiles folder is removed. Static files are served on Cloudinary.
 
 ### Unfixed Bugs 
+- The edit recipe form is fully functional and the recipe is updated successfully, but the image link for "currently" field is not displayed as it should be. The field for previous uploaded / default image placeholder in the update form remains empty. This has resulted in empty link error during wave accessibility test. The quick fix was to use {{ form.as_p }} and render django form as paragraph rather than crispy ones. This fix works but caused the layout issue and the website was not responsive. Due to time constraint, the bug is left unattained. The update functionality though works as expected. 
 
-
+![edit-page-placeholder-bug](documentation/docs_images/recipe-edit%20placeholder.png)
 
 
 ## Deployment
@@ -1224,6 +1227,17 @@ For more details on how to clone the repository in order to create a copy for ow
 
 ## Credits
 
+- All images used on the website are sourced from [Pexels](https://www.pexels.com/), [Pixabay](https://pixabay.com/) and [Unsplash.](https://unsplash.com/)
+- All the recipes on the website are taken from [BBC Good Food.](https://www.bbcgoodfood.com/)
+- Code Institute's "I Think Therefore I Blog" walkthrough project was referred throughout during development.
+- [Django Documentation](https://docs.djangoproject.com/en/4.2/) helped me in understanding the class based views and search functionality.
+- Ability to create and update recipe post while getting a success message displayed is achieved by following instructions in Stack Overflow article. [Create/Update Recipe](https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post)
+- [Recipe Tutorial](https://www.youtube.com/watch?v=ZCPhzoK_bg4&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=3) helped me to get started with the files setup and base structure.
+- The code for deleting recipe is referred from this [Recipe Tutorial.](https://www.youtube.com/watch?v=nFa3lC105dM&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=13)
+- [Readme](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/tree/main?tab=readme-ov-file#heroku-deployment) used for basic readme structure.
+- [Blog Tutorial](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) helped me in creating my models and understanding the CRUD functionality.
+- The PositiveInteger validation for cooking time, prep time and servings was referred from this [article.](https://stackoverflow.com/questions/2248617/0-value-in-django-positiveintegerfield)
+- The search functionality in django was studied from this [tutorial](https://learndjango.com/tutorials/django-search-tutorial) and modified according to the project requirements.
 
 
 
