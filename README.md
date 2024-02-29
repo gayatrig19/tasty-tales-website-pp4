@@ -7,10 +7,11 @@ Tasty Tales is a full stack web application that gives user a platform to view a
 
 - The website is built using HTML, CSS, JavaScript, Python and the Django framework as a Portfolio Project#4 for the Code Institute's Full Stack Software Development Course.
 
-            Website Image goes here
+
+![tasty-tales-mockup-image](documentation/docs_images/tasty-tales-mockup-image.PNG)
 
 
-## The live website link goes here
+### [Link to Live Website](https://tasty-tales-4b4d80fd4040.herokuapp.com/)
 
 ------
 
