@@ -1160,6 +1160,11 @@ No unit testing performed at this stage.
 ![edit-page-placeholder-bug](documentation/docs_images/recipe-edit%20placeholder.png)
 
 
+- While testing the website on BrowserStack, an accessibility issue not really a bug is noticed for the like icon. On every other device the like icon displays as expected. But in case of iphone and ipad, the icon appears as expected when viewed by unauthorised users. The like icon however appears transparent to the logged-in users. The functionality though is not affected and like button works properly.
+
+![like-icon-ipad-bug](documentation/docs_images/bug-ipad-air.png)
+
+
 ## Deployment
 
 ### Version Control
